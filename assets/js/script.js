@@ -27,6 +27,7 @@ function createBushes() {
     bush.appendChild(raccoon);
     raccoon.addEventListener('click', function() {
         bush.removeChild(raccoon);
+        bush.classList.add('empty');
     })
 
     setTimeout(function() {
