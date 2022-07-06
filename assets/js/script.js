@@ -15,16 +15,17 @@ function createBushes() {
     }
 }
 /** 
- * Selects a random bush to spawn a raccoon in 
+ * Select a random bush to spawn a raccoon in 
  */
-function spawnRaccoon() {
+function randomBush() {
     let gameBody = document.getElementById('game-section');
     let bushes = document.getElementsByClassName('bush');
     // Generate a random number between 1 and 8
     let randomBushNumber = Math.ceil(Math.random() * bushes.length);
 
-    console.log(randomBushNumber);
+    console.log(`Selected bush number ${randomBushNumber}`);
+    return bushes[randomBushNumber];
 }
 
 createBushes();
-spawnRaccoon();
+randomBush();
