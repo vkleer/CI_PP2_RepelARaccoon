@@ -15,6 +15,19 @@ function createBushes() {
     }
 }
 /** 
+ * Spawn a raccoon
+ */
+ function spawnRaccoon() {
+    const spawnInterval = 2000;
+    let bush = randomBush();
+    let raccoon = document.createElement('div');
+    bush.appendChild(raccoon);
+
+    setTimeout(function() {
+        bush.removeChild(raccoon);
+    }, spawnInterval);
+}
+/** 
  * Select a random bush to spawn a raccoon in 
  */
 function randomBush() {
@@ -28,4 +41,4 @@ function randomBush() {
 }
 
 createBushes();
-randomBush();
+spawnRaccoon();
