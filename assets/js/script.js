@@ -34,8 +34,8 @@ function createBushes() {
 function randomBush() {
     let gameBody = document.getElementById('game-section');
     let bushes = document.getElementsByClassName('bush');
-    // Generate a random number between 1 and 8
-    let randomBushNumber = Math.ceil(Math.random() * bushes.length);
+    // Generate a random number between 0 and 7
+    let randomBushNumber = Math.floor(Math.random() * bushes.length);
 
     console.log(`Selected bush number ${randomBushNumber}`);
     return bushes[randomBushNumber];
