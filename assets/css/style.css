@@ -62,6 +62,7 @@ header h1 {
 .raccoon {
     height: 100px;
     width: 50px;
+    margin: -50px auto;
     background-color:rgb(40, 40, 40);
 }
 
