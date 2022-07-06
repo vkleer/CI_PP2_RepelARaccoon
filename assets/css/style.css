@@ -13,6 +13,12 @@ header h1 {
     text-align: center;
 }
 
+#home-section {
+    height: 500px;
+    background-color: rgba(255, 255, 255);
+    text-align: center;
+}
+/* Game section */
 #game-section {
     height: 500px;
     background-color: rgb(35, 163, 15);
@@ -21,7 +27,16 @@ header h1 {
 #game-body {
     width: 320px;
 }
-
+/* Buttons */
+.btn {
+    height: 50px;
+    width: 200px;
+    margin-top: 40px;
+    background-color: rgb(40, 40, 40);
+    color: white;
+    font-size: 1.5rem;
+}
+/* Game assets */
 .bush {
     height: 50px;
     width: 100px;
@@ -35,4 +50,8 @@ header h1 {
     height: 100px;
     width: 50px;
     background-color:rgb(40, 40, 40);
+}
+
+.hide {
+    display: none;
 }
