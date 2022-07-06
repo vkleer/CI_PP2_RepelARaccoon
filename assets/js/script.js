@@ -1,3 +1,16 @@
+// Set the script to start the game on the start button
+// when the DOM has finished loading
+document.addEventListener('DOMContentLoaded', function() {
+    let startButton = document.getElementById('start-button');
+    startButton.addEventListener('click', startGame);
+});
+/** 
+ * Starts the game
+ */
+function startGame() {
+    createBushes();
+    setInterval(spawnRaccoon, 1000);
+}
 /**
  * Creates div elements where the racoons will spawn
  */
@@ -60,12 +73,16 @@ function randomBush() {
     console.log(`Selected bush number ${randomBushNumber}`);
     return bushes[randomBushNumber];
 }
-// Gets the current score from the DOM and increments it by 1
+/** 
+ * Gets the current score from the DOM and increments it by 1
+ * */ 
 function incrementScore() {
     let oldScore = parseInt(document.getElementById('score').innerText);
     document.getElementById('score').innerText = ++oldScore;
 }
-// Gets the current cheese from the DOM and reduces it by 1
+/**
+ * Gets the current cheese from the DOM and reduces it by 1
+ */
 function takeCheese() {
     let oldCheeseAmount = parseInt(document.getElementById('current-cheese').innerText);
 
@@ -75,6 +92,3 @@ function takeCheese() {
         console.log('Game over!');
     }
 }
-
-createBushes();
-setInterval(spawnRaccoon, 1000);
