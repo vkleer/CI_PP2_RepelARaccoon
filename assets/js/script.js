@@ -8,6 +8,7 @@ function createBushes() {
 
     while (bushCount < bushNumber) {
         let bush = document.createElement('div');
+        bush.classList.add('bush');
         gameBody.appendChild(bush);
         console.log('Create a bush!');
         bushCount++
