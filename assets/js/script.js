@@ -32,6 +32,30 @@ function startGame() {
     
 }
 /**
+ * Stops the game if lost
+ */
+function lostGame() {
+     // Clear the interval, hide the game-section and show game-over-section
+     clearInterval(GameState);
+     document.getElementById('game-section').classList.add('hide');
+     document.getElementById('game-over-section').classList.remove('hide');
+    // Get the score
+     let score = parseInt(document.getElementById('score').innerText);
+     document.getElementById('game-over-title').innerText = 'Game Over!'
+     if (score !== 0) {
+        document.getElementById('game-over-text').innerText = `
+        You tried your best, but these pesky raccoons managed to steal all of your cheese.
+        You did get a score of ${score} though, not bad!
+        Want to play again?`;
+     } else {
+        document.getElementById('game-over-text').innerText = `
+            It looks like you didn't repel any of the raccoons - would you like to see 
+            the game instructions and try again?`;
+     }
+    
+     console.log('Game over!');
+}
+/**
  * Creates div elements where the racoons will spawn
  */
 function createBushes() {
@@ -103,15 +127,13 @@ function incrementScore() {
 /**
  * Gets the current cheese from the DOM and reduces it by 1
  */
- function takeCheese() {
+function takeCheese() {
     let oldCheeseAmount = parseInt(document.getElementById('current-cheese').innerText);
 
     if (oldCheeseAmount !== 0) {
         document.getElementById('current-cheese').innerText = --oldCheeseAmount;
     } else {
-        // Stop the game, hide the game-section
-        clearInterval(GameState);
-        document.getElementById('game-section').classList.add('hide');
-        console.log('Game over!');
+       lostGame();
+    //    exit;
     }
 }
