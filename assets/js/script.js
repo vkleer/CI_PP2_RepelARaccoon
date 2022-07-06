@@ -2,7 +2,7 @@
  * Creates div elements where the racoons will spawn
  */
 function createBushes() {
-    let gameBody = document.getElementById('game-section');
+    let gameBody = document.getElementById('game-body');
     let bushNumber = 8;
     let bushCount = 0;
 
@@ -48,7 +48,6 @@ function createBushes() {
  * Select a random bush to spawn a raccoon in 
  */
 function randomBush() {
-    let gameBody = document.getElementById('game-section');
     let bushes = document.getElementsByClassName('bush');
     // Generate a random number between 0 and 7
     let randomBushNumber = Math.floor(Math.random() * bushes.length);
