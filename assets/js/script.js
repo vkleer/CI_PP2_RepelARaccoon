@@ -8,7 +8,7 @@ function createBushes() {
 
     while (bushCount < bushNumber) {
         let bush = document.createElement('div');
-        bush.classList.add('bush');
+        bush.classList.add('bush', 'empty');
         gameBody.appendChild(bush);
         console.log('Create a bush!');
         bushCount++
@@ -22,6 +22,8 @@ function createBushes() {
     let bush = randomBush();
     let raccoon = document.createElement('div');
     raccoon.classList.add('raccoon');
+    bush.classList.remove('empty');
+
     bush.appendChild(raccoon);
     raccoon.addEventListener('click', function() {
         bush.removeChild(raccoon);
@@ -30,6 +32,7 @@ function createBushes() {
     setTimeout(function() {
         if (bush.contains(raccoon)) {
             bush.removeChild(raccoon);
+            bush.classList.add('empty');
         } else {
             console.log('There are no raccoons!');
         }
@@ -43,11 +46,15 @@ function randomBush() {
     let bushes = document.getElementsByClassName('bush');
     // Generate a random number between 0 and 7
     let randomBushNumber = Math.floor(Math.random() * bushes.length);
-
+    let currentBush = bushes[randomBushNumber];
+    
+    if (!currentBush.classList.contains('empty')) {
+        console.log('You already used this bush!');
+        return randomBush();
+    }
     console.log(`Selected bush number ${randomBushNumber}`);
     return bushes[randomBushNumber];
 }
 
 createBushes();
-
-setInterval(spawnRaccoon, 2000);
+setInterval(spawnRaccoon, 1000);
