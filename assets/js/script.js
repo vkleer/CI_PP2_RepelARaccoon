@@ -3,13 +3,18 @@
 document.addEventListener('DOMContentLoaded', function() {
     let startButton = document.getElementById('start-button');
     startButton.addEventListener('click', startGame);
+    // Creates a global variable that starts and stops the game
+    let GameState;
 });
 /** 
  * Starts the game
  */
 function startGame() {
     createBushes();
-    setInterval(spawnRaccoon, 1000);
+    GameState = setInterval(spawnRaccoon, 1000);
+    document.getElementById('home-section').classList.add('hide');
+    document.getElementById('game-section').classList.remove('hide');
+    
 }
 /**
  * Creates div elements where the racoons will spawn
@@ -89,6 +94,9 @@ function takeCheese() {
     if (oldCheeseAmount !== 0) {
         document.getElementById('current-cheese').innerText = --oldCheeseAmount;
     } else {
+        // Stop the game, hide the game-section
+        clearInterval(GameState);
+        document.getElementById('game-section').classList.add('hide');
         console.log('Game over!');
     }
 }
