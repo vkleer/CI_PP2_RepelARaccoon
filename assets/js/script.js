@@ -14,9 +14,14 @@ document.addEventListener('DOMContentLoaded', function() {
  * Starts the game
  */
 function startGame() {
+    // Add game-body to game-section 
+    let gameBody = document.createElement('div');
+    gameBody.setAttribute('id', 'game-body');
+    document.getElementById('game-section').appendChild(gameBody);
+    // Set raccoon spawn speed and amount of cheese
     GameState = setInterval(spawnRaccoon, 1000);
     cheeseAmount = 5;
-
+    // Set cheese amount and show game-section
     document.getElementById('current-cheese').innerText = cheeseAmount;
     document.getElementById('home-section').classList.add('hide');
     document.getElementById('game-section').classList.remove('hide');
@@ -29,7 +34,6 @@ function startGame() {
     if (!document.getElementById('game-over-section').classList.contains('hide')) {
         document.getElementById('game-over-section').classList.add('hide');
     }
-    
 }
 /**
  * Stops the game if lost
@@ -39,6 +43,8 @@ function lostGame() {
      clearInterval(GameState);
      document.getElementById('game-section').classList.add('hide');
      document.getElementById('game-over-section').classList.remove('hide');
+    // Remove game-body
+    document.getElementById('game-body').remove();
     // Get the score
      let score = parseInt(document.getElementById('score').innerText);
      document.getElementById('game-over-title').innerText = 'Game Over!'
@@ -82,7 +88,6 @@ function createBushes() {
     // Add raccoon class to div and remove empty class from bush
     raccoon.classList.add('raccoon');
     bush.classList.remove('empty');
-
     // Add event listener to check for clicks
     bush.appendChild(raccoon);
     raccoon.addEventListener('click', function() {
@@ -90,7 +95,7 @@ function createBushes() {
         bush.classList.add('empty');
         incrementScore();
     })
-
+    // Removes raccoon from game after timer
     setTimeout(function() {
         if (bush.contains(raccoon)) {
             bush.removeChild(raccoon);
@@ -130,10 +135,10 @@ function incrementScore() {
 function takeCheese() {
     let oldCheeseAmount = parseInt(document.getElementById('current-cheese').innerText);
 
-    if (oldCheeseAmount !== 0) {
+    if (oldCheeseAmount !== 1) {
         document.getElementById('current-cheese').innerText = --oldCheeseAmount;
     } else {
-       lostGame();
-    //    exit;
+        document.getElementById('current-cheese').innerText = 0;
+        lostGame();
     }
 }
