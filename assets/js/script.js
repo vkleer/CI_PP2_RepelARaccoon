@@ -1,8 +1,12 @@
 // Set the script to start the game on the start button
 // when the DOM has finished loading
 document.addEventListener('DOMContentLoaded', function() {
-    let startButton = document.getElementById('start-button');
-    startButton.addEventListener('click', startGame);
+    let startButtons = document.getElementsByClassName('start-button');
+
+    for (let button in startButtons) {
+       
+        startButtons[button].addEventListener('click', startGame);
+    }
     // Creates a global variable that starts and stops the game
     let GameState;
 });
@@ -10,10 +14,21 @@ document.addEventListener('DOMContentLoaded', function() {
  * Starts the game
  */
 function startGame() {
-    createBushes();
     GameState = setInterval(spawnRaccoon, 1000);
+    cheeseAmount = 5;
+
+    document.getElementById('current-cheese').innerText = cheeseAmount;
     document.getElementById('home-section').classList.add('hide');
     document.getElementById('game-section').classList.remove('hide');
+    // Call createBushes if no bushes currently exist
+    if (document.getElementsByClassName('bush').length === 0) {
+        console.log(document.getElementsByClassName('bush'));
+        createBushes();
+    }
+    // checks if game-over-section is already hidden or not
+    if (!document.getElementById('game-over-section').classList.contains('hide')) {
+        document.getElementById('game-over-section').classList.add('hide');
+    }
     
 }
 /**
@@ -29,7 +44,7 @@ function createBushes() {
         bush.classList.add('bush', 'empty');
         gameBody.appendChild(bush);
         console.log('Create a bush!');
-        bushCount++
+        bushCount++;
     }
 }
 /** 
@@ -37,7 +52,7 @@ function createBushes() {
  */
  function spawnRaccoon() {
     // Sets the lifespan of raccoon
-    const spawnInterval = 2000;
+    const lifeSpan = 2000;
     let bush = randomBush();
     let raccoon = document.createElement('div');
     // Add raccoon class to div and remove empty class from bush
@@ -60,7 +75,7 @@ function createBushes() {
         } else {
             console.log('There are no raccoons!');
         }
-    }, spawnInterval);
+    }, lifeSpan);
 }
 /** 
  * Select a random bush to spawn a raccoon in 
@@ -88,7 +103,7 @@ function incrementScore() {
 /**
  * Gets the current cheese from the DOM and reduces it by 1
  */
-function takeCheese() {
+ function takeCheese() {
     let oldCheeseAmount = parseInt(document.getElementById('current-cheese').innerText);
 
     if (oldCheeseAmount !== 0) {
