@@ -23,9 +23,16 @@ function createBushes() {
     let raccoon = document.createElement('div');
     raccoon.classList.add('raccoon');
     bush.appendChild(raccoon);
+    raccoon.addEventListener('click', function() {
+        bush.removeChild(raccoon);
+    })
 
     setTimeout(function() {
-        bush.removeChild(raccoon);
+        if (bush.contains(raccoon)) {
+            bush.removeChild(raccoon);
+        } else {
+            console.log('There are no raccoons!');
+        }
     }, spawnInterval);
 }
 /** 
