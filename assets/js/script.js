@@ -21,6 +21,7 @@ function createBushes() {
     const spawnInterval = 2000;
     let bush = randomBush();
     let raccoon = document.createElement('div');
+    raccoon.classList.add('raccoon');
     bush.appendChild(raccoon);
 
     setTimeout(function() {

@@ -25,4 +25,11 @@ header h1 {
     background-color: rgb(23, 110, 10);
     display: inline-block;
     margin: 35px 20px;
+    text-align: center;
+}
+
+.raccoon {
+    height: 100px;
+    width: 50px;
+    background-color:rgb(40, 40, 40);
 }
