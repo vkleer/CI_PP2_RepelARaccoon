@@ -27,6 +27,19 @@ header h1 {
 #game-body {
     width: 320px;
 }
+/* Game over section */
+#game-over-section {
+    height: 500px;
+    background-color: rgba(255, 255, 255);
+    text-align: center;
+}
+#game-over-section h1 {
+    margin-top: 20px;
+}
+#game-over-section p {
+    text-align: left;
+    margin: 0 35px;
+}
 /* Buttons */
 .btn {
     height: 50px;
