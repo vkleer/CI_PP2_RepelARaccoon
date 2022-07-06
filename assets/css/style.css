@@ -1,0 +1,19 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+body {
+    background-color: rgb(40, 40, 40);
+}
+
+header h1 {
+    color: rgb(255, 255, 255);
+    text-align: center;
+}
+
+#game-section{
+    height: 500px;
+    background-color: rgb(35, 163, 15);
+}
