@@ -38,6 +38,7 @@ function createBushes() {
         if (bush.contains(raccoon)) {
             bush.removeChild(raccoon);
             bush.classList.add('empty');
+            takeCheese();
         } else {
             console.log('There are no raccoons!');
         }
@@ -64,6 +65,16 @@ function randomBush() {
 function incrementScore() {
     let oldScore = parseInt(document.getElementById('score').innerText);
     document.getElementById('score').innerText = ++oldScore;
+}
+// Gets the current cheese from the DOM and reduces it by 1
+function takeCheese() {
+    let oldCheeseAmount = parseInt(document.getElementById('current-cheese').innerText);
+
+    if (oldCheeseAmount !== 0) {
+        document.getElementById('current-cheese').innerText = --oldCheeseAmount;
+    } else {
+        console.log('Game over!');
+    }
 }
 
 createBushes();
