@@ -40,6 +40,17 @@ header h1 {
     text-align: left;
     margin: 0 35px;
 }
+
+#scores p {
+    display: inline-block;
+    margin: 10px 5px 30px;
+    padding: 4px;
+    background-color: white;
+    border: solid 1px black;
+}
+#scores p span {
+    font-weight: bold;
+}
 /* Buttons */
 .btn {
     height: 50px;
@@ -55,7 +66,7 @@ header h1 {
     width: 100px;
     background-color: rgb(23, 110, 10);
     display: inline-block;
-    margin: 35px 20px;
+    margin: 30px 20px;
     text-align: center;
 }
 
