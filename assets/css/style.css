@@ -73,6 +73,16 @@ header h1 {
     text-align: center;
 }
 
+.cheese {
+    height: 40px;
+    width: 40px;
+    background-color: rgb(255, 217, 0);
+    display: inline-block;
+    margin: 0 20px;
+    border: solid 2px black;
+    border-radius: 20px;
+}
+
 .raccoon {
     height: 100px;
     max-width: 60%;
@@ -88,5 +98,9 @@ header h1 {
 @media screen and (max-width: 420px) {
     .bush {
         max-width: 20%;
+    }
+
+    .cheese {
+        margin: 0 5px;
     }
 }
