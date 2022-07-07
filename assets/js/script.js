@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
        
         startButtons[button].addEventListener('click', startGame);
     }
-    // Creates a global variable that starts and stops the game
+    // Variables to start the game and game timer
     let GameState;
     let GameTimer;
 });
@@ -87,7 +87,7 @@ function lostGame() {
  */
 function createBushes() {
     let gameBody = document.getElementById('game-body');
-    let bushNumber = 8;
+    let bushNumber = 9;
     let bushCount = 0;
 
     while (bushCount < bushNumber) {
