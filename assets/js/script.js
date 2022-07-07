@@ -9,15 +9,20 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     // Creates a global variable that starts and stops the game
     let GameState;
+    let GameTimer;
 });
 /** 
  * Starts the game
  */
-function startGame() {
+function startGame() { // Add parameters for time and difficulty level
     // Add game-body to game-section 
     let gameBody = document.createElement('div');
     gameBody.setAttribute('id', 'game-body');
     document.getElementById('game-section').appendChild(gameBody);
+    // Set time for game
+    let time = 60;
+    document.getElementById('time').innerText = time;
+    GameTimer = setInterval(startTimer, 1000);
     // Set raccoon spawn speed and amount of cheese
     GameState = setInterval(spawnRaccoon, 1000);
     cheeseAmount = 5;
@@ -36,11 +41,26 @@ function startGame() {
     }
 }
 /**
+ * Timer function
+ */
+function startTimer() {
+    let oldTime = parseInt(document.getElementById('time').innerText);
+
+    if (oldTime !== 1) {
+        document.getElementById('time').innerText = --oldTime;
+    } else {
+        document.getElementById('time').innerText = 0;
+        // wingame function
+    }
+}
+/**
  * Stops the game if lost
  */
 function lostGame() {
-     // Clear the interval, hide the game-section and show game-over-section
+     // Stop spawning raccoons and stop timer 
      clearInterval(GameState);
+     clearInterval(GameTimer);
+     // Hide the game-section and show game-over-section
      document.getElementById('game-section').classList.add('hide');
      document.getElementById('game-over-section').classList.remove('hide');
     // Remove game-body
