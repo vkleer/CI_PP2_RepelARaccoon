@@ -32,6 +32,11 @@ function startGame() { // Add parameters for time and difficulty level
     document.getElementById('current-cheese').innerText = cheeseAmount;
     document.getElementById('home-section').classList.add('hide');
     document.getElementById('game-section').classList.remove('hide');
+    // Call createCheese is no cheese currently exists
+    if (document.getElementsByClassName('cheese').length === 0) {
+        console.log(document.getElementsByClassName('cheese'));
+        createCheese();
+    }
     // Call createBushes if no bushes currently exist
     if (document.getElementsByClassName('bush').length === 0) {
         console.log(document.getElementsByClassName('bush'));
