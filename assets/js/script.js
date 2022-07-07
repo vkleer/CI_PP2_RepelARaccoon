@@ -78,8 +78,9 @@ function lostGame() {
             It looks like you didn't repel any of the raccoons - would you like to see 
             the game instructions and try again?`;
      }
-    
-     console.log('Game over!');
+    // After the score has been grabbed and displayed, set it back to 0
+    document.getElementById('score').innerText = 0;
+    console.log('Game over!');
 }
 /**
  * Creates div elements where the racoons will spawn
