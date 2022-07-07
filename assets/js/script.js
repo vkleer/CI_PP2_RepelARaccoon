@@ -5,7 +5,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
     for (let button in startButtons) {
        
-        startButtons[button].addEventListener('click', startGame);
+        startButtons[button].addEventListener('click', function() {
+            startGame();
+        });
     }
     // Variables to start the game and game timer
     let GameState;
@@ -96,6 +98,22 @@ function createBushes() {
         gameBody.appendChild(bush);
         console.log('Create a bush!');
         bushCount++;
+    }
+}
+/**
+ * Creates div elements that represent cheese
+ */
+ function createCheese() {
+    let gameBody = document.getElementById('cheeses');
+    let cheeseAmount = 5;
+    let cheeseCount = 0;
+
+    while (cheeseCount < cheeseAmount) {
+        let cheese = document.createElement('div');
+        cheese.classList.add('cheese');
+        gameBody.appendChild(cheese);
+        console.log('Created some cheese!');
+        cheeseCount++;
     }
 }
 /** 
