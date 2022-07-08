@@ -2,12 +2,17 @@
 // when the DOM has finished loading
 document.addEventListener('DOMContentLoaded', function() {
     let startButtons = document.getElementsByClassName('start-button');
+    let howToButtons = document.getElementsByClassName('how-to-button');
 
-    for (let button in startButtons) {
+    for (let button of startButtons) {
        
-        startButtons[button].addEventListener('click', function() {
+        button.addEventListener('click', function() {
             startGame();
         });
+    }
+
+    for (let button of howToButtons) {
+        button.addEventListener('click', startGame);
     }
     // Variables to start the game and game timer
     let GameState;
@@ -109,14 +114,14 @@ function createBushes() {
  * Creates div elements that represent cheese
  */
  function createCheese() {
-    let gameBody = document.getElementById('cheeses');
+    let cheeses = document.getElementById('cheeses');
     let cheeseAmount = 5;
     let cheeseCount = 0;
 
     while (cheeseCount < cheeseAmount) {
         let cheese = document.createElement('div');
         cheese.classList.add('cheese');
-        gameBody.appendChild(cheese);
+        cheeses.appendChild(cheese);
         console.log('Created some cheese!');
         cheeseCount++;
     }
