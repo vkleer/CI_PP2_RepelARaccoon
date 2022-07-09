@@ -6,22 +6,42 @@ document.addEventListener('DOMContentLoaded', function() {
     // Add startGame function to all buttons with start-button class
     for (let button of startButtons) {
        
-        button.addEventListener('click', function() {
-            startGame();
-        });
+        button.addEventListener('click', pickDifficulty);
     }
     // Add startGame function to all buttons with how-to-button class
     for (let button of howToButtons) {
-        button.addEventListener('click', startGame);
+        button.addEventListener('click', pickDifficulty);
     }
     // Variables to start the game and game timer
     let GameState;
     let GameTimer;
 });
+function pickDifficulty() {
+    // Hide the home-section and show the difficulty-section
+    document.getElementById('home-section').classList.add('hide');
+    document.getElementById('game-over-section').classList.add('hide');
+    document.getElementById('difficulty-section').classList.remove('hide');
+    // Get the buttons to set difficulty with
+    let easyButton = document.getElementById('easy');
+    let normalButton = document.getElementById('normal');
+    let hardButton = document.getElementById('hard');
+    // Sets the game difficulty to easy
+    easyButton.addEventListener('click', function() {
+        startGame('easy', 1000, 3)
+    });
+    // Sets the game difficulty to normal
+    normalButton.addEventListener('click', function() {
+        startGame('normal', 1000, 6)
+    });
+    // Sets the game difficulty to hard
+    hardButton.addEventListener('click', function() {
+        startGame('hard', 1000, 9)
+    });
+}
 /** 
  * Starts the game
  */
-function startGame() { // Add parameters for time and difficulty level
+function startGame(difficulty, lifeSpan, bushNumber) { // Add parameters for time and difficulty level
     // Add cheeses to game-section
     let cheeses = document.createElement('div');
     cheeses.setAttribute('id', 'cheeses');
@@ -31,15 +51,17 @@ function startGame() { // Add parameters for time and difficulty level
     gameBody.setAttribute('id', 'game-body');
     document.getElementById('game-section').appendChild(gameBody);
     // Set time for game
-    let time = 60;
+    let time = 30;
     document.getElementById('time').innerText = time;
     GameTimer = setInterval(startTimer, 1000);
     // Set raccoon spawn speed and amount of cheese
-    GameState = setInterval(spawnRaccoon, 2000);
+    GameState = setInterval(function() {
+        spawnRaccoon(lifeSpan)
+    }, lifeSpan);
     cheeseAmount = 5;
     // Set cheese amount and show game-section
     document.getElementById('current-cheese').innerText = cheeseAmount;
-    document.getElementById('home-section').classList.add('hide');
+    document.getElementById('difficulty-section').classList.add('hide');
     document.getElementById('game-section').classList.remove('hide');
     // Call createCheese is no cheese currently exists
     if (document.getElementsByClassName('cheese').length === 0) {
@@ -49,7 +71,7 @@ function startGame() { // Add parameters for time and difficulty level
     // Call createBushes if no bushes currently exist
     if (document.getElementsByClassName('bush').length === 0) {
         console.log(document.getElementsByClassName('bush'));
-        createBushes();
+        createBushes(bushNumber);
     }
     // checks if game-over-section is already hidden or not
     if (!document.getElementById('game-over-section').classList.contains('hide')) {
@@ -100,9 +122,8 @@ function lostGame() {
 /**
  * Creates div elements where the racoons will spawn
  */
-function createBushes() {
+function createBushes(bushNumber) {
     let gameBody = document.getElementById('game-body');
-    let bushNumber = 9;
     let bushCount = 0;
 
     while (bushCount < bushNumber) {
@@ -132,9 +153,7 @@ function createBushes() {
 /** 
  * Spawn a raccoon
  */
- function spawnRaccoon() { // set parameter to use for lifespan
-    // Sets the lifespan of raccoon
-    let lifeSpan = 2000;
+ function spawnRaccoon(lifeSpan) { // set parameter to use for lifespan
     let bush = randomBush();
     let raccoon = document.createElement('div');
     // Add raccoon class to div and remove empty class from bush
@@ -156,7 +175,7 @@ function createBushes() {
         } else {
             console.log('There are no raccoons!');
         }
-    }, lifeSpan);  
+    }, lifeSpan);
 }
 /** 
  * Select a random bush to spawn a raccoon in 
