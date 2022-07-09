@@ -3,14 +3,14 @@
 document.addEventListener('DOMContentLoaded', function() {
     let startButtons = document.getElementsByClassName('start-button');
     let howToButtons = document.getElementsByClassName('how-to-button');
-
+    // Add startGame function to all buttons with start-button class
     for (let button of startButtons) {
        
         button.addEventListener('click', function() {
             startGame();
         });
     }
-
+    // Add startGame function to all buttons with how-to-button class
     for (let button of howToButtons) {
         button.addEventListener('click', startGame);
     }
@@ -22,6 +22,10 @@ document.addEventListener('DOMContentLoaded', function() {
  * Starts the game
  */
 function startGame() { // Add parameters for time and difficulty level
+    // Add cheeses to game-section
+    let cheeses = document.createElement('div');
+    cheeses.setAttribute('id', 'cheeses');
+    document.getElementById('game-section').appendChild(cheeses);
     // Add game-body to game-section 
     let gameBody = document.createElement('div');
     gameBody.setAttribute('id', 'game-body');
@@ -31,7 +35,7 @@ function startGame() { // Add parameters for time and difficulty level
     document.getElementById('time').innerText = time;
     GameTimer = setInterval(startTimer, 1000);
     // Set raccoon spawn speed and amount of cheese
-    GameState = setInterval(spawnRaccoon, 1000);
+    GameState = setInterval(spawnRaccoon, 2000);
     cheeseAmount = 5;
     // Set cheese amount and show game-section
     document.getElementById('current-cheese').innerText = cheeseAmount;
@@ -57,7 +61,6 @@ function startGame() { // Add parameters for time and difficulty level
  */
 function startTimer() {
     let oldTime = parseInt(document.getElementById('time').innerText);
-
     if (oldTime !== 1) {
         document.getElementById('time').innerText = --oldTime;
     } else {
@@ -129,9 +132,9 @@ function createBushes() {
 /** 
  * Spawn a raccoon
  */
- function spawnRaccoon() {
+ function spawnRaccoon() { // set parameter to use for lifespan
     // Sets the lifespan of raccoon
-    const lifeSpan = 2000;
+    let lifeSpan = 2000;
     let bush = randomBush();
     let raccoon = document.createElement('div');
     // Add raccoon class to div and remove empty class from bush
@@ -143,9 +146,9 @@ function createBushes() {
         bush.removeChild(raccoon);
         bush.classList.add('empty');
         incrementScore();
-    })
+    });
     // Removes raccoon from game after timer
-    setTimeout(function() {
+    setTimeout(function() {  
         if (bush.contains(raccoon)) {
             bush.removeChild(raccoon);
             bush.classList.add('empty');
@@ -153,7 +156,7 @@ function createBushes() {
         } else {
             console.log('There are no raccoons!');
         }
-    }, lifeSpan);
+    }, lifeSpan);  
 }
 /** 
  * Select a random bush to spawn a raccoon in 
@@ -183,11 +186,14 @@ function incrementScore() {
  */
 function takeCheese() {
     let oldCheeseAmount = parseInt(document.getElementById('current-cheese').innerText);
+    let cheeseBlocks = document.getElementsByClassName('cheese');
 
-    if (oldCheeseAmount !== 1) {
+    if (oldCheeseAmount !== 0) {
         document.getElementById('current-cheese').innerText = --oldCheeseAmount;
-    } else {
-        document.getElementById('current-cheese').innerText = 0;
-        lostGame();
-    }
+        cheeseBlocks[0].remove();
+        if (oldCheeseAmount === 0) {
+            document.getElementById('current-cheese').innerText = 0;
+            lostGame();
+        }
+    } 
 }
