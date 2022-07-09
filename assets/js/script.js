@@ -17,6 +17,8 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 function pickDifficulty() {
+    // Clear difficulty text
+    document.getElementById('difficulty').innerText = '';
     // Hide the home-section and show the difficulty-section
     document.getElementById('home-section').classList.add('hide');
     document.getElementById('game-over-section').classList.add('hide');
@@ -27,23 +29,24 @@ function pickDifficulty() {
     let hardButton = document.getElementById('hard');
     // Sets the game difficulty to easy
     easyButton.addEventListener('click', function() {
-        startGame('easy', 1000, 3)
+        startGame('Easy', 1000, 3)
     });
     // Sets the game difficulty to normal
     normalButton.addEventListener('click', function() {
-        startGame('normal', 800, 6)
+        startGame('Normal', 800, 6)
     });
     // Sets the game difficulty to hard
     hardButton.addEventListener('click', function() {
-        startGame('hard', 600, 9)
+        startGame('Hard', 600, 9)
     });
 }
 /** 
  * Starts the game
  */
 function startGame(difficulty, lifeSpan, bushNumber) { // Add parameters for time and difficulty level
-    // Clear gamestate to avoid duplicating setInterval
+    // Clear GameState and GameTimer to avoid duplicating setInterval
     clearInterval(GameState);
+    clearInterval(GameTimer);
     // Add cheeses to game-section
     let cheeses = document.createElement('div');
     cheeses.setAttribute('id', 'cheeses');
@@ -56,15 +59,17 @@ function startGame(difficulty, lifeSpan, bushNumber) { // Add parameters for tim
     let time = 30;
     document.getElementById('time').innerText = time;
     GameTimer = setInterval(startTimer, 1000);
-    // Set raccoon spawn speed and amount of cheese
+    // Set raccoon spawn speed
     GameState = setInterval(function() {
         spawnRaccoon(lifeSpan)
     }, lifeSpan);
-    cheeseAmount = 5;
     // Set cheese amount and show game-section
+    cheeseAmount = 5;
     document.getElementById('current-cheese').innerText = cheeseAmount;
     document.getElementById('difficulty-section').classList.add('hide');
     document.getElementById('game-section').classList.remove('hide');
+    // Set difficulty text
+    document.getElementById('difficulty').innerText = difficulty;
     // Call createCheese is no cheese currently exists
     if (document.getElementsByClassName('cheese').length === 0) {
         createCheese();
