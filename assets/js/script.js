@@ -1,3 +1,6 @@
+// Global variable to start/stop game and timer
+let GameState;
+let GameTimer;
 // Set the script to start the game on the start button
 // when the DOM has finished loading
 document.addEventListener('DOMContentLoaded', function() {
@@ -12,9 +15,6 @@ document.addEventListener('DOMContentLoaded', function() {
     for (let button of howToButtons) {
         button.addEventListener('click', pickDifficulty);
     }
-    // Variables to start the game and game timer
-    let GameState;
-    let GameTimer;
 });
 function pickDifficulty() {
     // Hide the home-section and show the difficulty-section
@@ -31,17 +31,19 @@ function pickDifficulty() {
     });
     // Sets the game difficulty to normal
     normalButton.addEventListener('click', function() {
-        startGame('normal', 1000, 6)
+        startGame('normal', 800, 6)
     });
     // Sets the game difficulty to hard
     hardButton.addEventListener('click', function() {
-        startGame('hard', 1000, 9)
+        startGame('hard', 600, 9)
     });
 }
 /** 
  * Starts the game
  */
 function startGame(difficulty, lifeSpan, bushNumber) { // Add parameters for time and difficulty level
+    // Clear gamestate to avoid duplicating setInterval
+    clearInterval(GameState);
     // Add cheeses to game-section
     let cheeses = document.createElement('div');
     cheeses.setAttribute('id', 'cheeses');
@@ -65,17 +67,11 @@ function startGame(difficulty, lifeSpan, bushNumber) { // Add parameters for tim
     document.getElementById('game-section').classList.remove('hide');
     // Call createCheese is no cheese currently exists
     if (document.getElementsByClassName('cheese').length === 0) {
-        console.log(document.getElementsByClassName('cheese'));
         createCheese();
     }
     // Call createBushes if no bushes currently exist
     if (document.getElementsByClassName('bush').length === 0) {
-        console.log(document.getElementsByClassName('bush'));
         createBushes(bushNumber);
-    }
-    // checks if game-over-section is already hidden or not
-    if (!document.getElementById('game-over-section').classList.contains('hide')) {
-        document.getElementById('game-over-section').classList.add('hide');
     }
 }
 /**
@@ -95,13 +91,15 @@ function startTimer() {
  */
 function lostGame() {
      // Stop spawning raccoons and stop timer 
-     clearInterval(GameState);
-     clearInterval(GameTimer);
-     // Hide the game-section and show game-over-section
-     document.getElementById('game-section').classList.add('hide');
-     document.getElementById('game-over-section').classList.remove('hide');
+    clearInterval(GameState);
+    clearInterval(GameTimer);
+    // Hide the game-section and show game-over-section
+    document.getElementById('game-section').classList.add('hide');
+    document.getElementById('game-over-section').classList.remove('hide');
     // Remove game-body
     document.getElementById('game-body').remove();
+    // Remove cheeses
+    document.getElementById('cheeses').remove();
     // Get the score
      let score = parseInt(document.getElementById('score').innerText);
      document.getElementById('game-over-title').innerText = 'Game Over!'
