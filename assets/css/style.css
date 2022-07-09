@@ -4,13 +4,15 @@
     border: none;
 }
 
-header div {
-    height: 100px;
+header {
+    height: 120px;
     background-color: rgb(40, 40, 40);
-}
-header h1 {
     color: rgb(255, 255, 255);
     text-align: center;
+}
+header h1 {
+    display: inline-block;
+    margin: 20px 0;
 }
 /* Section class for all sections */
 .section{
