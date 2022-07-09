@@ -56,7 +56,7 @@ function startGame(difficulty, lifeSpan, bushNumber) { // Add parameters for tim
     gameBody.setAttribute('id', 'game-body');
     document.getElementById('game-section').appendChild(gameBody);
     // Set time for game
-    let time = 30;
+    let time = 5;
     document.getElementById('time').innerText = time;
     GameTimer = setInterval(startTimer, 1000);
     // Set raccoon spawn speed
@@ -88,39 +88,54 @@ function startTimer() {
         document.getElementById('time').innerText = --oldTime;
     } else {
         document.getElementById('time').innerText = 0;
-        // wingame function
+        winGame(true);
     }
 }
 /**
- * Stops the game if lost
+ * Checks if the user won or lost
  */
-function lostGame() {
-     // Stop spawning raccoons and stop timer 
-    clearInterval(GameState);
-    clearInterval(GameTimer);
-    // Hide the game-section and show game-over-section
-    document.getElementById('game-section').classList.add('hide');
-    document.getElementById('game-over-section').classList.remove('hide');
-    // Remove game-body
-    document.getElementById('game-body').remove();
-    // Remove cheeses
-    document.getElementById('cheeses').remove();
-    // Get the score
-     let score = parseInt(document.getElementById('score').innerText);
-     document.getElementById('game-over-title').innerText = 'Game Over!'
-     if (score !== 0) {
+ function winGame(win) {
+    // Stop spawning raccoons and stop timer 
+   clearInterval(GameState);
+   clearInterval(GameTimer);
+   // Hide the game-section and show game-over-section
+   document.getElementById('game-section').classList.add('hide');
+   document.getElementById('game-over-section').classList.remove('hide');
+   // Remove game-body
+   document.getElementById('game-body').remove();
+   // Remove cheeses
+   document.getElementById('cheeses').remove();
+   // Get the score
+    let score = parseInt(document.getElementById('score').innerText);
+    let cheeseLeft = parseInt(document.getElementById('current-cheese').innerText);
+
+    if (win === true && cheeseLeft === 5) {
+        document.getElementById('game-over-title').innerText = 'You Won!'
+        document.getElementById('game-over-text').innerText = `
+        You've successfully repelled all the raccoons, and more importantly, keep all of your cheese - well done!
+        You got a score of ${score}
+        Want to play again?`;
+    } else if (win === true) {
+        document.getElementById('game-over-title').innerText = 'You Won!'
+        document.getElementById('game-over-text').innerText = `
+        You've managed to repel almost all of the raccoons, good job!
+        You got a score of ${score} and have ${cheeseLeft} cheeses left.
+        Want to try and get a perfect score this time?`;
+    } else {
+        document.getElementById('game-over-title').innerText = 'Game Over!'
+    if (score !== 0) {
         document.getElementById('game-over-text').innerText = `
         You tried your best, but these pesky raccoons managed to steal all of your cheese.
         You did get a score of ${score} though, not bad!
         Want to play again?`;
-     } else {
+    } else {
         document.getElementById('game-over-text').innerText = `
-            It looks like you didn't repel any of the raccoons - would you like to see 
-            the game instructions and try again?`;
-     }
-    // After the score has been grabbed and displayed, set it back to 0
-    document.getElementById('score').innerText = 0;
-    console.log('Game over!');
+        It looks like you didn't repel any of the raccoons - would you like to see 
+        the game instructions and try again?`;
+    }
+    }
+   // After the score has been grabbed and displayed, set it back to 0
+   document.getElementById('score').innerText = 0;
 }
 /**
  * Creates div elements where the racoons will spawn
@@ -215,7 +230,7 @@ function takeCheese() {
         cheeseBlocks[0].remove();
         if (oldCheeseAmount === 0) {
             document.getElementById('current-cheese').innerText = 0;
-            lostGame();
+            winGame(false);
         }
     } 
 }
