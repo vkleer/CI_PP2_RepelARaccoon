@@ -4,20 +4,28 @@
     border: none;
 }
 
-body {
+header div {
+    height: 100px;
     background-color: rgb(40, 40, 40);
 }
-
 header h1 {
     color: rgb(255, 255, 255);
     text-align: center;
 }
-
-#home-section {
+/* Section class for all sections */
+.section{
     height: 500px;
     background-color: rgba(255, 255, 255);
     text-align: center;
 }
+/* Home section */
+/* #home-section {
+    
+} */
+/* Difficulty section */
+/* #difficulty-section {
+    
+} */
 /* Game section */
 #game-section {
     height: 500px;
@@ -27,14 +35,12 @@ header h1 {
 #game-body {
     max-width: 500px;
     width: 100%;
-    margin: 0 auto;
+    margin: 40px auto;
 }
 /* Game over section */
-#game-over-section {
-    height: 500px;
-    background-color: rgba(255, 255, 255);
-    text-align: center;
-}
+/* #game-over-section {
+    
+} */
 #game-over-section h1 {
     padding-top: 20px;
 }
@@ -63,10 +69,11 @@ header h1 {
 .btn {
     height: 50px;
     width: 200px;
-    margin-top: 40px;
     background-color: rgb(40, 40, 40);
     color: white;
     font-size: 1.5rem;
+    display: block;
+    margin: 40px auto;
 }
 /* Game assets */
 .bush {
