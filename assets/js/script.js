@@ -6,19 +6,22 @@ let GameTimer;
 document.addEventListener('DOMContentLoaded', function() {
     let startButtons = document.getElementsByClassName('start-button');
     let howToButtons = document.getElementsByClassName('how-to-button');
+    let goBackButtons = document.getElementsByClassName('home-button');
     // Add startGame function to all buttons with start-button class
     for (let button of startButtons) {
        
         button.addEventListener('click', pickDifficulty);
     }
-    // Add startGame function to all buttons with how-to-button class
+    // Add howToPlay function to all buttons with how-to-button class
     for (let button of howToButtons) {
-        button.addEventListener('click', pickDifficulty);
+        button.addEventListener('click', howToPlay);
+    }
+    // Add goBack function to all buttons with home-button class
+    for (let button of goBackButtons) {
+        button.addEventListener('click', goBack);
     }
 });
 function pickDifficulty() {
-    // Clear difficulty text
-    document.getElementById('difficulty').innerText = '';
     // Hide the home-section and show the difficulty-section
     document.getElementById('home-section').classList.add('hide');
     document.getElementById('game-over-section').classList.add('hide');
@@ -40,7 +43,23 @@ function pickDifficulty() {
         startGame('Hard', 600, 9)
     });
 }
+/**
+ * Shows game instructions
+ */
+function howToPlay() {
+    // Hide the home-section and show the how-to-play-section
+    document.getElementById('home-section').classList.add('hide');
+    document.getElementById('game-over-section').classList.add('hide');
+    document.getElementById('how-to-play-section').classList.remove('hide');
+}
+function goBack() {
+    // Hides the section the user is currently in and go back to home-section
+    document.getElementById('how-to-play-section').classList.add('hide');
+    document.getElementById('difficulty-section').classList.add('hide');
+    document.getElementById('home-section').classList.remove('hide');
+}
 /** 
+ * 
  * Starts the game
  */
 function startGame(difficulty, lifeSpan, bushNumber) { // Add parameters for time and difficulty level
