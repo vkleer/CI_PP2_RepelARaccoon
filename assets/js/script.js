@@ -74,14 +74,6 @@ function startGame(difficulty, lifeSpan, bushNumber) { // Add parameters for tim
     clearInterval(GameTimer);
     // Set the title of the section
     document.getElementById('section-title').innerText = `Playing on ${difficulty} difficulty`;
-    // Add cheeses to game-section
-    let cheeses = document.createElement('div');
-    cheeses.setAttribute('id', 'cheeses');
-    document.getElementById('game-section').appendChild(cheeses);
-    // Add game-body to game-section 
-    let gameBody = document.createElement('div');
-    gameBody.setAttribute('id', 'game-body');
-    document.getElementById('game-section').appendChild(gameBody);
     // Set time for game
     let time = 5;
     document.getElementById('time').innerText = time;
@@ -99,10 +91,20 @@ function startGame(difficulty, lifeSpan, bushNumber) { // Add parameters for tim
     document.getElementById('difficulty').innerText = difficulty;
     // Call createCheese is no cheese currently exists
     if (document.getElementsByClassName('cheese').length === 0) {
+        // Add cheeses to game-section
+        let cheeses = document.createElement('div');
+        cheeses.setAttribute('id', 'cheeses');
+        document.getElementById('game-section').appendChild(cheeses);
+        // Call createCheese is no cheese currently exists
         createCheese();
     }
     // Call createBushes if no bushes currently exist
     if (document.getElementsByClassName('bush').length === 0) {
+        // Add game-body to game-section 
+        let gameBody = document.createElement('div');
+        gameBody.setAttribute('id', 'game-body');
+        document.getElementById('game-section').appendChild(gameBody);
+        // Call createBushes if no bushes currently exist
         createBushes(bushNumber);
     }
 }
