@@ -15,24 +15,22 @@ header h1 {
     margin: 20px 0;
 }
 /* Section class for all sections */
-.section{
+.section {
     height: 500px;
+    max-width: 500px;
+    width: 100%;
     background-color: rgba(255, 255, 255);
     text-align: center;
+    margin: 0 auto;
 }
-/* Home section */
-/* #home-section {
-    
-} */
-/* Difficulty section */
-/* #difficulty-section {
-    
-} */
+.section p, .section li {
+    text-align: left;
+    margin: 0 35px;
+}
 /* Game section */
 #game-section {
-    height: 500px;
+    height: auto;
     background-color: rgb(35, 163, 15);
-    text-align: center
 }
 #game-body {
     max-width: 500px;
@@ -45,10 +43,6 @@ header h1 {
 } */
 #game-over-section h1 {
     padding-top: 20px;
-}
-#game-over-section p {
-    text-align: left;
-    margin: 0 35px;
 }
 
 #game-over {
