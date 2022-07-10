@@ -22,6 +22,8 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 function pickDifficulty() {
+    // Set the title of the section
+    document.getElementById('section-title').innerText = 'Choose your difficulty level';
     // Hide the home-section and show the difficulty-section
     document.getElementById('home-section').classList.add('hide');
     document.getElementById('game-over-section').classList.add('hide');
@@ -47,12 +49,16 @@ function pickDifficulty() {
  * Shows game instructions
  */
 function howToPlay() {
+    // Set the title of the section
+    document.getElementById('section-title').innerText = 'How to Play'
     // Hide the home-section and show the how-to-play-section
     document.getElementById('home-section').classList.add('hide');
     document.getElementById('game-over-section').classList.add('hide');
     document.getElementById('how-to-play-section').classList.remove('hide');
 }
 function goBack() {
+    // Set the title of the section
+    document.getElementById('section-title').innerText = `Gotta repel 'em all!`;
     // Hides the section the user is currently in and go back to home-section
     document.getElementById('how-to-play-section').classList.add('hide');
     document.getElementById('difficulty-section').classList.add('hide');
@@ -66,6 +72,8 @@ function startGame(difficulty, lifeSpan, bushNumber) { // Add parameters for tim
     // Clear GameState and GameTimer to avoid duplicating setInterval
     clearInterval(GameState);
     clearInterval(GameTimer);
+    // Set the title of the section
+    document.getElementById('section-title').innerText = `Playing on ${difficulty} difficulty`;
     // Add cheeses to game-section
     let cheeses = document.createElement('div');
     cheeses.setAttribute('id', 'cheeses');
@@ -131,8 +139,8 @@ function startTimer() {
     if (win === true && cheeseLeft === 5) {
         document.getElementById('game-over-title').innerText = 'You Won!'
         document.getElementById('game-over-text').innerText = `
-        You've successfully repelled all the raccoons, and more importantly, keep all of your cheese - well done!
-        You got a score of ${score}
+        You've successfully repelled all the raccoons, and more importantly, kept all of your cheese - well done!
+        You got a perfect score of ${score}!
         Want to play again?`;
     } else if (win === true) {
         document.getElementById('game-over-title').innerText = 'You Won!'
