@@ -73,7 +73,7 @@ function startGame(difficulty, lifeSpan, bushNumber) { // Add parameters for tim
     clearInterval(GameState);
     clearInterval(GameTimer);
     // Set the title of the section
-    document.getElementById('section-title').innerText = `Playing on ${difficulty} difficulty`;
+    document.getElementById('section-title').innerText = `Difficulty: ${difficulty}`;
     // Set time for game
     let time = 5;
     document.getElementById('time').innerText = time;
@@ -87,8 +87,6 @@ function startGame(difficulty, lifeSpan, bushNumber) { // Add parameters for tim
     document.getElementById('current-cheese').innerText = cheeseAmount;
     document.getElementById('difficulty-section').classList.add('hide');
     document.getElementById('game-section').classList.remove('hide');
-    // Set difficulty text
-    document.getElementById('difficulty').innerText = difficulty;
     // Call createCheese is no cheese currently exists
     if (document.getElementsByClassName('cheese').length === 0) {
         // Add cheeses to game-section
