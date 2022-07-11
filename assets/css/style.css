@@ -22,15 +22,24 @@ header h1 {
     background-color: rgba(255, 255, 255);
     text-align: center;
     margin: 0 auto;
+    padding-top: 40px;
+    display: flex;
+    flex-direction: column;
 }
-.section p, .section li {
+.section p {
     text-align: left;
+    margin: 0 35px 20px;
+}
+.section li {
+    text-align: inherit;
     margin: 0 35px;
 }
 /* Game section */
 #game-section {
     height: auto;
+    max-width: none;
     background-color: rgb(35, 163, 15);
+    padding-top: 0;
 }
 #game-body {
     max-width: 500px;
@@ -41,11 +50,14 @@ header h1 {
 #cheeses {
     margin: 20px auto;
 }
-/* Game over section */
-#game-over-section h1 {
-    padding-top: 20px;
+/* How to play section */
+#how-to-play-section {
+    height: 600px;
 }
-
+#how-to-play-section ol {
+    margin-bottom: 20px;
+}
+/* Game over section */
 #game-over {
     max-width: 500px;
     width: 100%;
@@ -70,7 +82,7 @@ header h1 {
     color: white;
     font-size: 1.5rem;
     display: block;
-    margin: 40px auto;
+    margin: 0 auto 40px;
 }
 /* Game assets */
 .bush {
