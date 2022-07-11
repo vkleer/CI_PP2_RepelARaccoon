@@ -157,7 +157,7 @@ function startTimer() {
         Want to play again?`;
     } else {
         document.getElementById('game-over-text').innerText = `
-        It looks like you didn't repel any of the raccoons - would you like to see 
+        It looks like you didn't repel any of the raccoons - perhaps read
         the game instructions and try again?`;
     }
     }
