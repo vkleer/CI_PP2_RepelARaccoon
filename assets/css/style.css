@@ -35,12 +35,13 @@ header h1 {
 #game-body {
     max-width: 500px;
     width: 100%;
-    margin: 40px auto;
+    margin: 0 auto;
+}
+
+#cheeses {
+    margin: 20px auto;
 }
 /* Game over section */
-/* #game-over-section {
-    
-} */
 #game-over-section h1 {
     padding-top: 20px;
 }
@@ -53,7 +54,7 @@ header h1 {
 
 #scores p {
     display: inline-block;
-    margin: 10px 5px 30px;
+    margin: 20px 5px 10px;
     padding: 4px;
     background-color: white;
     border: solid 1px black;
@@ -73,43 +74,70 @@ header h1 {
 }
 /* Game assets */
 .bush {
-    height: 50px;
-    max-width: 23%;
-    width: 100%;
-    background-color: rgb(23, 110, 10);
+    height: 37px;
+    width: 92px;
+    background-image: url('../images/bush.png');
+    background-size: contain;
+    background-repeat: no-repeat;
     display: inline-block;
-    margin: 30px 20px;
+    margin: 20px;
     text-align: center;
 }
 
 .cheese {
-    height: 40px;
-    width: 40px;
-    background-color: rgb(255, 217, 0);
+    height: 28px;
+    width: 46px;
+    background-image: url('../images/cheese.png');
+    background-size: contain;
+    background-repeat: no-repeat;
     display: inline-block;
     margin: 0 20px;
-    border: solid 2px black;
-    border-radius: 20px;
 }
 
 .raccoon {
-    height: 100px;
-    max-width: 60%;
-    width: 100%;
-    margin: -50px auto;
-    background-color:rgb(40, 40, 40);
+    height: 61px;
+    width: 69px;
+    background-image: url('../images/raccoon.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin: -40px auto;
+    
 }
 
 .hide {
     display: none;
 }
 
-@media screen and (max-width: 420px) {
+@media screen and (max-width: 430px) {
     .bush {
-        max-width: 20%;
+        
+        margin: 10px;
+    }
+
+    .raccoon {
+        height: 46px;
+        width: 52px;
+        margin: -20px auto;
     }
 
     .cheese {
         margin: 0 5px;
+    }
+
+    #scores p {
+        display: inline-block;
+        margin-bottom: 5px;
+    }
+}
+/* Breakpoint for bushes */
+@media screen and (max-width: 340px) {
+    .bush {
+        height: 30px;
+        width: 74px;
+    }
+
+    .raccoon {
+        height: 42px;
+        width: 49px;
     }
 }
