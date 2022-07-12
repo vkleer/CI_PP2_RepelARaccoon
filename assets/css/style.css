@@ -1,44 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee&family=Quantico:wght@400;700&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     border: none;
 }
 
+body {
+    font-family: 'Quantico', sans-serif;
+    font-weight: 400;
+    /* Padding used to offset fixed footer */
+    padding-bottom: 65px;
+}
+
+h1, h2 {
+    font-weight: 700;
+}
+/* Header */
 header {
-    height: 120px;
+    height: 130px;
     background-color: rgb(40, 40, 40);
     color: rgb(255, 255, 255);
     text-align: center;
 }
 header h1 {
     display: inline-block;
-    margin: 20px 0;
+    font-family: 'Bungee', cursive;
 }
-/* Section class for all sections */
+/* Classes for all sections */
 .section {
-    height: 500px;
+    height: auto;
     max-width: 500px;
     width: 100%;
     background-color: rgba(255, 255, 255);
     text-align: center;
     margin: 0 auto;
-    padding-top: 40px;
+    padding: 40px 0 20px;
     display: flex;
     flex-direction: column;
 }
-.section p {
+.section p, .section ol {
     text-align: left;
     margin: 0 35px 20px;
 }
-.section li {
-    text-align: inherit;
-    margin: 0 35px;
+
+.btn {
+    height: 50px;
+    width: 200px;
+    background-color: rgb(255, 155, 0);
+    color: rgb(255, 255, 255);
+    font-size: 1.5rem;
+    font-weight: 700;
+    display: block;
+    margin: 0 auto 40px;
+}
+.btn:hover {
+    background-color: rgb(255, 255, 255);
+    color: rgb(255, 155, 0);
+    border: 4px solid rgb(255, 155, 0);
+}
+
+.hide {
+    display: none;
 }
 /* Game section */
 #game-section {
-    height: auto;
     max-width: none;
-    background-color: rgb(35, 163, 15);
+    /* background-color: rgb(35, 163, 15); */
     padding-top: 0;
 }
 #game-body {
@@ -49,13 +77,6 @@ header h1 {
 
 #cheeses {
     margin: 20px auto;
-}
-/* How to play section */
-#how-to-play-section {
-    height: 600px;
-}
-#how-to-play-section ol {
-    margin-bottom: 20px;
 }
 /* Game over section */
 #game-over {
@@ -68,21 +89,11 @@ header h1 {
     display: inline-block;
     margin: 20px 5px 10px;
     padding: 4px;
-    background-color: white;
-    border: solid 1px black;
+    background-color: rgb(255, 255, 255);
+    border: solid 1px rgb(0, 0, 0);
 }
 #scores p span {
     font-weight: bold;
-}
-/* Buttons */
-.btn {
-    height: 50px;
-    width: 200px;
-    background-color: rgb(40, 40, 40);
-    color: white;
-    font-size: 1.5rem;
-    display: block;
-    margin: 0 auto 40px;
 }
 /* Game assets */
 .bush {
@@ -115,12 +126,43 @@ header h1 {
     margin: -40px auto;
     
 }
+/* Footer */
+footer {
+    position: fixed;
+    width: 100%;
+    height: 65px;
+    background-color:rgb(40, 40, 40);
+    bottom: 0;
+}
+footer i, footer a {  
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    margin: 20px 0;
+}
 
-.hide {
-    display: none;
+#social-media {
+    font-size: 1.5rem;
+    float: left;
+    margin-left: 20px
+}
+
+#contact {
+    float: right;
+    font-size: 1.2rem;
+    margin-right: 20px;
 }
 
 @media screen and (max-width: 430px) {
+    /* Header */
+    header{
+        height: 110px;
+    }
+    header h1 {
+        font-size: 1.5rem;
+    }
+    header h2 {
+        font-size: 1.4rem;
+    }
     .bush {
         
         margin: 10px;

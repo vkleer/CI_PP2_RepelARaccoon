@@ -27,6 +27,7 @@ function pickDifficulty() {
     // Hide the home-section and show the difficulty-section
     document.getElementById('home-section').classList.add('hide');
     document.getElementById('game-over-section').classList.add('hide');
+    document.getElementById('how-to-play-section').classList.add('hide');
     document.getElementById('difficulty-section').classList.remove('hide');
     // Get the buttons to set difficulty with
     let easyButton = document.getElementById('easy');
@@ -157,8 +158,7 @@ function startTimer() {
         Want to play again?`;
     } else {
         document.getElementById('game-over-text').innerText = `
-        It looks like you didn't repel any of the raccoons - perhaps read
-        the game instructions and try again?`;
+        It looks like you didn't repel any of the raccoons - perhaps read the game instructions and try again?`;
     }
     }
    // After the score has been grabbed and displayed, set it back to 0
