@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="icon" href="assets/images/favicon.ico">
+    <title>Repel-A-Raccoon!</title>
+</head>
+<body>
+    <!-- Header with game name and logo -->
+    <header>
+        <h1>
+            <img src="assets/images/raccoon-logo.png" alt="Raccoon pixel art">
+            Repel-A-Raccoon!
+        </h1>
+        <h2 id="section-title">Gotta repel 'em all!</h2>
+    </header>
+    <section id="contact-section" class="section">
+        <h1>Report a Bug</h1>
+            <p>
+                Found a bug while playing the game? Please fill out this form in as much detail as you can so I can fix it. <br><br>
+                If you would like to contact me personally, please refer to my GitHub and LinkedIn handles in the bottom left corner of the page.
+            </p>
+            <!-- Form for Contact section -->
+            <form id="report-form" action="https://formdump.codeinstitute.net/" method="POST">
+                <div class="form-div">
+                    <label for="name">Name:</label>
+                    <input type="text" name="name" id="name" class="text-input" required>
+                </div>
+                <div class="form-div">
+                    <label for="email">Email:</label>
+                    <input type="email" name="email" id="email" class="text-input" required>
+                </div>
+                <div class="form-div">
+                    <label for="message">Message:</label>
+                    <textarea name="message" id="message" rows="10" class="text-input"></textarea>
+                </div>
+                <div id="form-buttons">
+                    <input class="btn" type="submit" value="Submit">
+                    <button class="btn"><a href="index.html">Go back</a></button>
+                </div>
+                
+            </form>
+    </section>
+    <!-- Footer with social media links -->
+    <footer>
+        <!-- Social media links -->
+        <div id="social-media">
+            <a href="https://www.github.com/vkleer" target="_blank" rel="noopener" aria-label="Visit my Github page (opens in a new tab)">
+                <i class="fab fa-github" aria-hidden="true"></i>
+            </a>
+            <a href="https://www.linkedin.com" target="_blank" rel="noopener" aria-label="Visit my LinkedIn page (opens in a new tab)">
+                <i class="fab fa-linkedin"></i>
+            </a>
+        </div>
+        <div id="contact">
+            <a href="#"><i class="fas fa-bug"></i> Report Bug</a>
+        </div>
+    </footer>
+    <!-- Font Awesome script -->
+    <script src="https://kit.fontawesome.com/8c3e71dbf3.js" crossorigin="anonymous"></script>
+    <!-- Game script -->
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
