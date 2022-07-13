@@ -4,9 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Repel-A-Raccoon!</title>
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="icon" href="assets/images/favicon.ico">
-    <title>Repel-A-Raccoon!</title>
+    <!-- EmailJS script needs to be loaded here to work properly -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 </head>
 <body>
     <!-- Header with game name and logo -->
@@ -20,11 +22,15 @@
     <section id="contact-section" class="section">
         <h1>Report a Bug</h1>
             <p>
-                Found a bug while playing the game? Please fill out this form in as much detail as you can so I can fix it. <br><br>
-                If you would like to contact me personally, please refer to my GitHub and LinkedIn handles in the bottom left corner of the page.
+                Found a bug while playing the game? Please fill out this form in as much detail as you can so 
+                I can work on it. <br><br>
+                If you would like to contact me personally, please refer to my GitHub and LinkedIn handles in the 
+                bottom left corner of the page.
             </p>
             <!-- Form for Contact section -->
-            <form id="report-form" action="https://formdump.codeinstitute.net/" method="POST">
+            <form id="report-form">
+                <!-- Used to generate a random contact number for email subject -->
+                <input type="hidden" name="report-number"> 
                 <div class="form-div">
                     <label for="name">Name:</label>
                     <input type="text" name="name" id="name" class="text-input" required>
@@ -41,7 +47,6 @@
                     <input class="btn" type="submit" value="Submit">
                     <button class="btn"><a href="index.html">Go back</a></button>
                 </div>
-                
             </form>
     </section>
     <!-- Footer with social media links -->
@@ -62,6 +67,6 @@
     <!-- Font Awesome script -->
     <script src="https://kit.fontawesome.com/8c3e71dbf3.js" crossorigin="anonymous"></script>
     <!-- Game script -->
-    <script src="assets/js/script.js"></script>
+    <script src="assets/js/report.js"></script>
 </body>
 </html>
