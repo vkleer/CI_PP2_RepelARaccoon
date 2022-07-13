@@ -193,7 +193,6 @@ function createBushes(bushNumber) {
         let bush = document.createElement('div');
         bush.classList.add('bush', 'empty');
         gameBody.appendChild(bush);
-        console.log('Create a bush!');
         bushCount++;
     }
 }
@@ -210,7 +209,6 @@ function createBushes(bushNumber) {
         let cheese = document.createElement('div');
         cheese.classList.add('cheese');
         cheeses.appendChild(cheese);
-        console.log('Created some cheese!');
         cheeseCount++;
     }
 }
@@ -258,7 +256,6 @@ function randomBush() {
     if (!currentBush.classList.contains('empty')) {
         return randomBush();
     }
-    console.log(`Selected bush number ${randomBushNumber}`);
     return bushes[randomBushNumber];
 }
 /** 
