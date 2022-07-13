@@ -123,7 +123,8 @@ function startGame(difficulty, lifeSpan, bushNumber) {
 }
 /**
  * Updates the element with the id of 'time' to show how much time is left before the game ends. 
- * If the timer reaches 0, the winGame function is called with the parameter set to true.
+ * If the timer reaches 0, the winGame function is called with the first parameter set to 'true' and
+ * the second parameter set to the difficulty of the game
  */
 function startTimer() {
     let oldTime = parseInt(document.getElementById('time').innerText);
@@ -131,7 +132,9 @@ function startTimer() {
         document.getElementById('time').innerText = --oldTime;
     } else {
         document.getElementById('time').innerText = 0;
-        winGame(true);
+        let difficultyString = document.getElementById('section-title').innerText;
+        let difficulty = difficultyString.split(' ').pop().toLowerCase;
+        winGame(true, difficulty);
     }
 }
 /**
@@ -142,11 +145,11 @@ function startTimer() {
  * The elements with an id of 'score' and 'current-cheese' are used to provide the user with feedback.
  * @param {boolean} win
  */
- function winGame(win) {
+ function winGame(win, difficulty) {
     clearInterval(GameState);
     clearInterval(GameTimer);
    
-    showSection('game-over-section');
+    showSection('game-over-section', 'Your result');
 
     document.getElementById('game-body').remove();
     document.getElementById('cheeses').remove();
@@ -157,20 +160,20 @@ function startTimer() {
         document.getElementById('game-over-title').innerText = 'You Won!'
         document.getElementById('game-over-text').innerText = `
         You've successfully repelled all the raccoons, and more importantly, kept all of your cheese - well done!
-        You got a perfect score of ${score}!
+        You got a perfect score of ${score} on ${difficulty} difficulty!
         Want to play again?`;
     } else if (win === true) {
         document.getElementById('game-over-title').innerText = 'You Won!'
         document.getElementById('game-over-text').innerText = `
         You've managed to repel almost all of the raccoons, good job!
-        You got a score of ${score} and have ${cheeseLeft} cheeses left.
+        You got a score of ${score} on ${difficulty} difficulty and have ${cheeseLeft} cheeses left.
         Want to try and get a perfect score this time?`;
     } else {
         document.getElementById('game-over-title').innerText = 'Game Over!'
     if (score !== 0) {
         document.getElementById('game-over-text').innerText = `
         You tried your best, but these pesky raccoons managed to steal all of your cheese.
-        You did get a score of ${score} though, not bad!
+        You did get a score of ${score} on ${difficulty} difficulty though, not bad!
         Want to play again?`;
     } else {
         document.getElementById('game-over-text').innerText = `
@@ -267,7 +270,8 @@ function incrementScore() {
 }
 /**
  * Updates the element with the 'current-cheese' id by subtracting its current value and calls the winGame 
- * function with the parameter set to 'false' if the element is equal to 0.
+ * function with the first parameter set to 'false' and the second parameter set to the difficulty of the 
+ * game, if the element is equal to 0
  */
 function takeCheese() {
     let oldCheeseAmount = parseInt(document.getElementById('current-cheese').innerText);
@@ -278,7 +282,9 @@ function takeCheese() {
         cheeseBlocks[0].remove();
         if (oldCheeseAmount === 0) {
             document.getElementById('current-cheese').innerText = 0;
-            winGame(false);
+            let difficultyString = document.getElementById('section-title').innerText;
+            let difficulty = difficultyString.split(' ').pop().toLowerCase();
+            winGame(false, difficulty);
         }
     } 
 }
