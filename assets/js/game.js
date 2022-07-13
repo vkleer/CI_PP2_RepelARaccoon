@@ -158,26 +158,26 @@ function startTimer() {
     let cheeseLeft = parseInt(document.getElementById('current-cheese').innerText);
     if (win === true && cheeseLeft === 5) {
         document.getElementById('game-over-title').innerText = 'You Won!'
-        document.getElementById('game-over-text').innerText = `
-        You've successfully repelled all the raccoons, and more importantly, kept all of your cheese - well done!
+        document.getElementById('game-over-text').innerText = 
+        `You've successfully repelled all the raccoons, and more importantly, kept all of your cheese - well done!
         You got a perfect score of ${score} on ${difficulty} difficulty!
         Want to play again?`;
     } else if (win === true) {
         document.getElementById('game-over-title').innerText = 'You Won!'
-        document.getElementById('game-over-text').innerText = `
-        You've managed to repel almost all of the raccoons, good job!
+        document.getElementById('game-over-text').innerText = 
+        `You've managed to repel almost all of the raccoons, good job!
         You got a score of ${score} on ${difficulty} difficulty and have ${cheeseLeft} cheeses left.
         Want to try and get a perfect score this time?`;
     } else {
         document.getElementById('game-over-title').innerText = 'Game Over!'
     if (score !== 0) {
-        document.getElementById('game-over-text').innerText = `
-        You tried your best, but these pesky raccoons managed to steal all of your cheese.
+        document.getElementById('game-over-text').innerText = 
+        `You tried your best, but these pesky raccoons managed to steal all of your cheese.
         You did get a score of ${score} on ${difficulty} difficulty though, not bad!
         Want to play again?`;
     } else {
-        document.getElementById('game-over-text').innerText = `
-        It looks like you didn't repel any of the raccoons - perhaps read the game instructions and try again?`;
+        document.getElementById('game-over-text').innerText = 
+        `It looks like you didn't repel any of the raccoons - perhaps read the game instructions and try again?`;
     }
     }
 
