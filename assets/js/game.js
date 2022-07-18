@@ -133,7 +133,7 @@ function startTimer() {
     } else {
         document.getElementById('time').innerText = 0;
         let difficultyString = document.getElementById('section-title').innerText;
-        let difficulty = difficultyString.split(' ').pop().toLowerCase;
+        let difficulty = difficultyString.split(' ').pop().toLowerCase();
         winGame(true, difficulty);
     }
 }

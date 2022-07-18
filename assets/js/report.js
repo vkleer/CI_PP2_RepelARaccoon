@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function () {
     document.getElementById('report-form').addEventListener('submit', function (event) {
         event.preventDefault();
         // Create a random 5 digit number for co
-        this.report_number.value = Math.round(Math.random() * 100000);
+        this.report_number.value = Math.random() * 100000 | 0;
         emailjs.init("2uEyqQHZW4FhfzgDy");
         emailjs.sendForm('repel-a-raccoon', 'template_raccoon', this)
             .then(function () {
