@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     for (let button of goBackButtons) {
         button.addEventListener('click', function() {
-            showSection('home-section', `Gotta repel 'em all!`);
+            showSection('home-section', 'A game inspired by Whack-A-Mole');
         });
     }
 
