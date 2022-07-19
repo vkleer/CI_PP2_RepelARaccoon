@@ -1,5 +1,5 @@
 /** 
- * Collects the data from
+ * Collects data from the form and sends it to the email address specified on EmailJS
  */
 document.addEventListener('DOMContentLoaded', function () {
     document.getElementById('report-form').addEventListener('submit', function (event) {
@@ -25,6 +25,6 @@ function formSubmitted() {
     `<h1>Thank you for your report!</h1>
     <p>Thank you for taking the time to submit a bug report. We will provide you with an update once the
     bug has been fixed!</p>
-    <a href="index.html" id="return-btn" class="btn">Go back</a>`; 
+    <a href="index.html" class="btn return-btn">Go back</a>`; 
     document.getElementById('contact-section').innerHTML = formSubmitMessage;
 }
