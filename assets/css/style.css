@@ -211,14 +211,14 @@ footer i:hover, footer a:hover, footer a:hover i {
     margin: 0 5px;
 }
 
-#return-btn {
+.return-btn {
     text-decoration: none;
     box-sizing: border-box;
     display: inline-block;
     line-height: 50px;
 }
 
-#return-btn:hover {
+.return-btn:hover {
     line-height: 42px; /* Line height is changed to make room for padding */
 }
 
