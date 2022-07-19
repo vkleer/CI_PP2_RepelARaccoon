@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     for (let button of howToButtons) {
         button.addEventListener('click', function() {
-            showSection('how-to-play-section', 'How to Play');  
+            showSection('how-to-play-section', 'How to play');  
         });
     }
 
