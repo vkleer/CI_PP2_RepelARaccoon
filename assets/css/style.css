@@ -177,6 +177,9 @@ footer i:hover, footer a:hover, footer a:hover i {
     float: left;
     margin-left: 20px
 }
+#social-media a {
+    margin-right: 10px;
+}
 
 #report {
     float: right;
