@@ -40,26 +40,43 @@
 ## Project Goals
 
 ### User Goals
--
+- Play a casual and fun clicking/tapping game 
+- See if you're fast enough to beat every difficulty level
 
 ### Website Owner Goals
-- 
+- Creating a casual and fun game that has replay value
+- Have the website and game be responsive to work on any device
 
 ## User Experience
-- 
 
 ### Target Audience
-- 
+- People who like browser-based games
+- People who like whack-a-mole games
+- People who want to play a quick, fun game
+- Casual gamers
 
 ### User Requirements and Expectations
-- 
+- Minimalistic, simple way to navigate the website and game
+- Fun game that anyone can pick up and play
+- Visually appealing website and game that's consistent in style, no matter the device
+- A way to report bugs if any are found
+- Meeting accessibility and readability standards
 
 ### User Stories
 
 #### User
+1. As a user, I want to be able to play the game on different difficulty levels
+2. As a user, I want to be able to read the game instructions before playing the game
+3. As a user, I want to see how much time there is left to play the game
+4. As a user, I want to see my score during and after the game
+5. As a user, I want to see how many lives I have left in the game
+6. As a user, I want to receive feedback after I won the game
+7. As a user, I want to receive feedback after I lost the game
 
-#### Website owner
-
+#### Site owner
+8. As the website owner, I want users to be able to report a bug
+9. As the website owner, I want users to be able to contact me personally on social media
+10. As the website owner, I want to provide an interactive and responsive game that works on all devices
 
 ## Design
 
