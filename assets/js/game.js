@@ -4,17 +4,17 @@ let GameTimer;
 
 /**
  * Adds an event listener to the document when its loaded.
- * Grabs all elements with a class name of 'start-button', 'how-to-button' and 'home-button' and assigns each
+ * Grabs all elements with a class name of 'start-button', 'how-to-button' and 'back-button' and assigns each
  * HTMLCollection to its own variable. 
  * The 'startButtons' variable is looped through, each element being 
  * assigned an event listener, calling the pickDifficulty function when clicked on.
- * The 'howToButtons' and 'goBackButtons' variables are also looped through, each element being assigned an
+ * The 'howToButtons' and 'backButtons' variables are also looped through, each element being assigned an
  * event listener, calling the showSection function when being clicked on instead.
  */
 document.addEventListener('DOMContentLoaded', function() {
     let startButtons = document.getElementsByClassName('start-button');
     let howToButtons = document.getElementsByClassName('how-to-button');
-    let goBackButtons = document.getElementsByClassName('home-button');
+    let backButtons = document.getElementsByClassName('back-button');
 
     for (let button of startButtons) {
        
@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    for (let button of goBackButtons) {
+    for (let button of backButtons) {
         button.addEventListener('click', function() {
             showSection('home-section', 'A game inspired by Whack-A-Mole');
         });

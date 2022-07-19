@@ -25,6 +25,6 @@ function formSubmitted() {
     `<h1>Thank you for your report!</h1>
     <p>Thank you for taking the time to submit a bug report. We will provide you with an update once the
     bug has been fixed!</p>
-    <a href="index.html" class="btn return-btn">Go back</a>`; 
+    <a href="index.html" class="btn return-btn">Back to game</a>`; 
     document.getElementById('contact-section').innerHTML = formSubmitMessage;
 }
