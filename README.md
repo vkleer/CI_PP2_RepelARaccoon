@@ -1,7 +1,7 @@
 # Repel-A-Raccoon
 (Developer: Vilayat Kleer)
 
-![mockup-image.jpg]()
+![mockup-image.jpg](docs/mockup-image.JPG)
 
 [View the live website](https://vkleer.github.io/CI_PP2_RepelARaccoon/)
 
