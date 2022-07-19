@@ -21,12 +21,10 @@ document.addEventListener('DOMContentLoaded', function () {
  * Updates the HTML of the 'contact-section' section to thank the user for submitting the form
  */
 function formSubmitted() {
-    let formSubmitMessage =`
-    <section class="section">
-        <h1>Thank you for your report!</h1>
-        <p>Thank you for taking the time to submit a bug report. We will provide you with an update once the
-        bug has been fixed!</p>
-        <button class="btn"><a href="index.html">Back to game</a></button>
-    </section>`; 
+    let formSubmitMessage =
+    `<h1>Thank you for your report!</h1>
+    <p>Thank you for taking the time to submit a bug report. We will provide you with an update once the
+    bug has been fixed!</p>
+    <a href="index.html" id="return-btn" class="btn">Go back</a>`; 
     document.getElementById('contact-section').innerHTML = formSubmitMessage;
 }
