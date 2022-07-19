@@ -76,8 +76,26 @@
 
 
 ### Wireframes
-<details><summary>Home</summary>
-<img src="docs/wireframes/">
+<details><summary>Home section</summary>
+<img src="docs/wireframes/home.png">
+</details>
+<details><summary>Instructions section</summary>
+<img src="docs/wireframes/instructions.png">
+</details>
+<details><summary>Difficulty section</summary>
+<img src="docs/wireframes/difficulty.png">
+</details>
+<details><summary>Game section</summary>
+<img src="docs/wireframes/game.png">
+</details>
+<details><summary>Game over section</summary>
+<img src="docs/wireframes/game-over.png">
+</details>
+<details><summary>Report a bug section</summary>
+<img src="docs/wireframes/report-a-bug.png">
+</details>
+<details><summary>404 page</summary>
+<img src="docs/wireframes/404-page.png">
 </details>
 
 ## Technologies Used
