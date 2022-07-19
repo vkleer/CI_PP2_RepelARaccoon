@@ -1,3 +1,4 @@
+/* Google Fonts used on website */
 @import url('https://fonts.googleapis.com/css2?family=Bungee&family=Quantico:wght@400;700&display=swap');
 
 * {
@@ -9,15 +10,12 @@
 body {
     font-family: 'Quantico', sans-serif;
     font-weight: 400;
-    /* Padding used to offset fixed footer */
-    padding-bottom: 65px;
+    padding-bottom: 65px; /* Padding used to offset fixed footer */
 }
 
 h1, h2 {
-    font-weight: 700;
-}
-h2 {
     font-size: 1.3rem;
+    font-weight: 700;
 }
 /* Header */
 header {
@@ -29,6 +27,7 @@ header {
 header h1 {
     display: inline-block;
     font-family: 'Bungee', cursive;
+    font-size: 2rem;
 }
 header h1 a {
     text-decoration: none;
@@ -37,6 +36,7 @@ header h1 a {
 header h1 a:hover {
     color: rgb(255, 155, 0);
 }
+
 /* Classes for all sections */
 .section {
     height: auto;
@@ -52,6 +52,10 @@ header h1 a:hover {
 .section p, .section ol {
     text-align: left;
     margin: 0 35px 20px;
+}
+
+.section-no-btn {
+    padding-top: 20px;
 }
 
 .btn {
@@ -72,10 +76,9 @@ header h1 a:hover {
 .hide {
     display: none;
 }
+
 /* Game section */
 #game-section {
-    max-width: none;
-    /* background-color: rgb(35, 163, 15); */
     padding-top: 0;
 }
 #game-body {
@@ -87,6 +90,12 @@ header h1 a:hover {
 #cheeses {
     margin: 20px auto;
 }
+
+/* How-to-play section */
+#how-to-play-section .start-button {
+    margin-top: 30px;
+}
+
 /* Game over section */
 #game-over {
     max-width: 500px;
@@ -104,6 +113,7 @@ header h1 a:hover {
 #scores p span {
     font-weight: bold;
 }
+
 /* Game assets */
 .bush {
     height: 37px;
@@ -135,6 +145,7 @@ header h1 a:hover {
     margin: -40px auto;
     
 }
+
 /* Footer */
 footer {
     position: fixed;
@@ -163,6 +174,7 @@ footer i:hover, footer a:hover, footer a:hover i {
     font-size: 1.2rem;
     margin-right: 20px;
 }
+
 /* Report section */
 #report-form {
     margin: 0 35px;
@@ -196,18 +208,20 @@ footer i:hover, footer a:hover, footer a:hover i {
     display: inline-block;
     line-height: 50px;
 }
-/* Line height is changed to make room for padding */
+
 #return-btn:hover {
-    line-height: 42px;
+    line-height: 42px; /* Line height is changed to make room for padding */
 }
 
+/* Break point for form on small screens */
 @media screen and (max-width: 500px) {
-    #form-buttons input, #form-buttons button {
+    #form-buttons input, #form-buttons button, #form-buttons a {
         width: 100%;
         margin: 20px auto;
     }
 }
 
+/* Media query for small screens */
 @media screen and (max-width: 430px) {
     /* Header */
     header{
@@ -224,6 +238,7 @@ footer i:hover, footer a:hover, footer a:hover i {
         margin: 10px;
     }
 
+    /* Game assets */
     .raccoon {
         height: 46px;
         width: 52px;
@@ -234,11 +249,12 @@ footer i:hover, footer a:hover, footer a:hover i {
         margin: 0 5px;
     }
 
+    /* Game-over section */
     #scores p {
-        display: inline-block;
-        margin-bottom: 5px;
+        margin: 10px 0;
     }
 }
+
 /* Breakpoint for bushes */
 @media screen and (max-width: 340px) {
     .bush {
@@ -246,6 +262,7 @@ footer i:hover, footer a:hover, footer a:hover i {
         width: 74px;
     }
 
+    /* Sized to fit bushes proportionally */
     .raccoon {
         height: 42px;
         width: 49px;
