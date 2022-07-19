@@ -209,18 +209,23 @@ footer i:hover, footer a:hover, footer a:hover i {
     border: 1px solid rgb(40, 40, 40);
 }
 
-#form-buttons input, #form-buttons button {
+#form-buttons input, .return-btn {
     display: inline-block;
-    margin: 0 5px;
+}
+
+#form-submit {
+    float: left;
+}
+
+#form-back {
+    float: right;
 }
 
 .return-btn {
     text-decoration: none;
     box-sizing: border-box;
-    display: inline-block;
     line-height: 50px;
 }
-
 .return-btn:hover {
     line-height: 42px; /* Line height is changed to make room for padding */
 }
