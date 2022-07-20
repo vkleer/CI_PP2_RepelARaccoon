@@ -95,7 +95,7 @@ The background is a repeating pixel art pattern of green grass, which complement
 The header and footer use a dark gray colour to stand out from the bright colours used in the game and background. The dark gray colour was picked to keep the website balanced.
 
 <details><summary>Colour palette</summary>
-<img src="docs/features/colours.png">
+    <img src="docs/features/colours.png">
 </details>
 
 ### Fonts
@@ -109,11 +109,11 @@ The [Quantico font](https://fonts.google.com/specimen/Quantico?query=quantico) r
 The website is structured in a user-friendly, easy to use way and was designed using a mobile-first approach. 
 The footer is sticky since it contains the most information, allowing users to get in contact with me through Github and LinkedIn or to go to the 'Report a Bug' form. This is only noticable on mobile devices where the screen height is limited.
 
-Headings are used hierarchically on every page and section. Each section uses the same styling rules through classes for consistency and some sections have their content set dynamically through JavaScript.
+Headings are used hierarchically on every page and screen. Each screen uses the same styling rules through classes for consistency and some screens have their content set dynamically through JavaScript.
 
 The website consists of three pages:
 - The index page with five different screens:
-    - A home screen with two buttons, linking to the difficulty section and instructions section
+    - A home screen with two buttons, linking to the difficulty screen and instructions screen
     - A difficulty screen that allows users to pick a difficulty level for the game, starting the game when a difficulty level is chosen
     - An instructions screen informing users how to play the game along with a little backstory
     - A game screen that hold the actual game
@@ -122,26 +122,26 @@ The website consists of three pages:
 - The 404 page to re-direct users back to the index page if a 404 error occurs
 
 ### Wireframes
-<details><summary>Home section</summary>
-<img src="docs/wireframes/home.png">
+<details><summary>Home screen</summary>
+    <img src="docs/wireframes/home.png">
 </details>
-<details><summary>Instructions section</summary>
-<img src="docs/wireframes/instructions.png">
+<details><summary>Instructions screen</summary>
+    <img src="docs/wireframes/instructions.png">
 </details>
-<details><summary>Difficulty section</summary>
-<img src="docs/wireframes/difficulty.png">
+<details><summary>Difficulty screen</summary>
+    <img src="docs/wireframes/difficulty.png">
 </details>
-<details><summary>Game section</summary>
-<img src="docs/wireframes/game.png">
+<details><summary>Game screen</summary>
+    <img src="docs/wireframes/game.png">
 </details>
-<details><summary>Game over section</summary>
-<img src="docs/wireframes/game-over.png">
+<details><summary>Game over screen</summary>
+    <img src="docs/wireframes/game-over.png">
 </details>
-<details><summary>Report a bug section</summary>
-<img src="docs/wireframes/report-a-bug.png">
+<details><summary>Report a bug screen</summary>
+    <img src="docs/wireframes/report-a-bug.png">
 </details>
 <details><summary>404 page</summary>
-<img src="docs/wireframes/404-page.png">
+    <img src="docs/wireframes/404-page.png">
 </details>
 
 ## Technologies Used
@@ -240,7 +240,7 @@ The website has a total of three pages and 10 features.
 - Contains a heading that either tells you that you've won or lost, along with a paragraph to elaborate
 - The heading and paragraph are set dynamically, grabbing the score and cheese left values from the game to provide feedback to the user
 - Contains two buttons, one that links to the difficulty screen and one to the instructions screen
-- Covers user story **6** and **7**
+- Covers user story **4**, **6** and **7**
 
 <details><summary>Screenshot of Game Over screen</summary>
     <img src="docs/features/game-over-screen-feature.jpg">
@@ -352,14 +352,115 @@ The website has been tested without any issues on the four browsers with the lar
 - Mozilla Firefox
 
 ### Testing User Stories
-1. User story 1
+1. As a user, I want to be able to play the game on different difficulty levels
 
 | **Feature** | **Action** | **Expected Result** | **Actual Result** |
 |-------------|------------|---------------------|-------------------|
-| feature name | action description | expected description | result description |
+| Difficulty screen | Set the difficulty level of the game by clicking on the 'Easy', 'Normal' or 'Hard' button on the Difficulty screen  | Start the game on the selected difficulty level | Works as expected |
 
 <details><summary>Supporting Screenshots - User Story 1</summary>
-<img src="docs/user-story-testing/">
+    <img src="docs/user-story-testing/user-story-01.png">
+</details>
+
+2. As a user, I want to be able to read the game instructions before playing the game
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+| Instructions screen | Go to the Instructions screen using the 'How to play' button  | Be able to read the game instructions | Works as expected |
+
+<details><summary>Supporting Screenshots - User Story 2</summary>
+    <img src="docs/user-story-testing/user-story-02.png">
+</details>
+
+3. As a user, I want to see how much time there is left to play the game
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+| Game screen | Start the game | A game timer is displayed | Works as expected |
+
+<details><summary>Supporting Screenshots - User Story 3</summary>
+    <img src="docs/user-story-testing/user-story-03.png">
+</details>
+
+4. As a user, I want to see my score during and after the game
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+| Game screen | Start the game | A score counter is displayed | Works as expected |
+| Game Over screen | Finish the game | My score is displayed | Works as expected |
+
+<details><summary>Supporting Screenshots - User Story 4</summary>
+    <img src="docs/user-story-testing/user-story-04.png">
+</details>
+
+5. As a user, I want to see how many lives I have left in the game
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+| Game screen | Start the game  | A life counter is displayed | Works as expected |
+
+<details><summary>Supporting Screenshots - User Story 5</summary>
+    <img src="docs/user-story-testing/user-story-05.png">
+</details>
+
+6. As a user, I want to receive feedback after I won the game
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+| Game Over screen | Win the game  | A message is displayed to tell me that I won the game | Works as expected |
+
+<details><summary>Supporting Screenshots - User Story 6</summary>
+    <img src="docs/user-story-testing/user-story-06.png">
+</details>
+
+7. As a user, I want to receive feedback after I lost the game
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+| Game Over screen | Lose the game  | A message is displayed to tell me that I lost the game | Works as expected |
+
+<details><summary>Supporting Screenshots - User Story 7</summary>
+    <img src="docs/user-story-testing/user-story-07.png">
+</details>
+
+8. As the website owner, I want users to be able to report a bug
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+| Report a Bug form | Click on 'Report Bug' in the bottom right of the Footer  | A form is displayed | Works as expected |
+
+<details><summary>Supporting Screenshots - User Story 8</summary>
+    <img src="docs/user-story-testing/user-story-08.png">
+</details>
+
+9. As the website owner, I want user to receive feedback after submitting a bug report
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+| Report a Bug form | Submit the form after correctly filling it out | A message is displayed to inform the user of their submission | Works as expected |
+
+<details><summary>Supporting Screenshots - User Story 9</summary>
+    <img src="docs/user-story-testing/user-story-09.png">
+</details>
+
+10. As the website owner, I want users to be able to contact me personally on social media
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+| Footer | Click on the social media links in the bottom left of the Footer | A social media link is opened in a new tab | Works as expected |
+
+<details><summary>Supporting Screenshots - User Story 10</summary>
+    <img src="docs/user-story-testing/user-story-10.png">
+</details>
+
+11. As the website owner, I want to provide an interactive and responsive game that works on all devices
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+| The entire website, including the game | Open the website on different devices and play the game  | The website and game works on any device | Works as expected |
+
+<details><summary>Supporting Screenshots - User Story 11</summary>
+    <img src="docs/user-story-testing/user-story-11.png">
 </details>
 
 ## Bugs
