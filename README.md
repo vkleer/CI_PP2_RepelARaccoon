@@ -81,16 +81,44 @@
 ## Design
 
 ### Design Choices
+The game was designed to as an animal-friendly, casual game to kill some time. Instead of whacking moles with a hammer, you 'repel' raccoons by clicking or tapping on them as they pop up from a bush, removing any link to animal abuse from the game. 
 
+Both the website and game incorporate the pixel art style, which is an art genre I personally enjoy. The simple style is nostalgic and reinforces the indie-game vibe that I was looking for in this project. Although the background of the website was made by someone else (see credits), the sprites for the game were made by myself.
 
 ### Colour
 
+The colours that I used for the website are based off the colours I used for the sprites in the game. I designed the sprites early on to help guide the style of the website.
+
+The background is a repeating pixel art pattern of green grass, which complements the orange colour that is used for all hover effects on the anchor and button elements. The orange colour comes from the cheese sprite that I designed in Adobe Illustrator.
+
+The header and footer use a dark gray colour to stand out from the bright colours used in the game and background. The dark gray colour was picked to keep the website balanced.
+
+<details><summary>Colour palette</summary>
+<img src="docs/features/colours.png">
+</details>
 
 ### Fonts
+The fonts that I used are Bungee and Quantico. Bungee is used in the logo and the rest of the website and game uses Quantico with different font weights. Both fonts have a playfulness to them and add to the pixel art style that is used. 
 
+The [Bungee font](https://fonts.google.com/specimen/Bungee?query=bungee) is slightly rounded but still blocky and game-like. It stands out next to the angular Quantico font - which is why I used it for the logo.
+
+The [Quantico font](https://fonts.google.com/specimen/Quantico?query=quantico) reminds me of a modern version of the [GameBoy font](https://fontmeme.com/schriftarten/early-gameboy-schriftart/), making it perfectly suited for a pixel art game while still being easy to read.
 
 ### Structure
+The website is structured in a user-friendly, easy to use way and was designed using a mobile-first approach. 
+The footer is sticky since it contains the most information, allowing users to get in contact with me through Github and LinkedIn or to go to the 'Report a Bug' form. This is only noticable on mobile devices where the screen height is limited.
 
+Headings are used hierarchically on every page and section. Each section uses the same styling rules through classes for consistency and some sections have their content set dynamically through JavaScript.
+
+The website consists of three pages:
+- The index page with 5 different sections:
+    - A home section with two buttons, linking to the difficulty section and instructions section
+    - A difficulty section that allows users to pick a difficulty level for the game, starting the game when a difficulty level is chosen
+    - An instructions section informing users how to play the game along with a little backstory
+    - A game section that hold the actual game
+    - A game over section for when the user has finished playing
+- The report page with a form to report a bug
+- The 404 page to re-direct users back to the index page if a 404 error occurs
 
 ### Wireframes
 <details><summary>Home section</summary>
@@ -265,4 +293,3 @@ Images that are not referenced below are created or owned by the developer.
 ## Acknowledgements
 I would like to thank:
 - My mentor Mo Shami for providing me with advice and guidance for this project
-
