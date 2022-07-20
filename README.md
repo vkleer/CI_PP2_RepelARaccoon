@@ -183,40 +183,49 @@ The website has a total of x sections and x features.
 ## Testing
 
 ### HTML Validation
-The HTML of the website has been validated using W3C's Markup Validation Service.
+The HTML of the website has been validated using W3C's Markup Validation Service - no errors or warnings were found.
 
 <details><summary>Screenshot of index page HTML validation</summary>
-    <img src="docs/validation/">
+    <img src="docs/validation/index-html.jpg">
+</details>
+<details><summary>Screenshot of report page HTML validation</summary>
+    <img src="docs/validation/report-html.jpg">
 </details>
 <details><summary>Screenshot of 404 page HTML validation</summary>
-    <img src="docs/validation/">
+    <img src="docs/validation/404-html.jpg">
 </details>
 
 ### CSS Validation
-The CSS of the website has been validatus using W3C's CSS Validation Service.
+The CSS of the website has been validatus using W3C's CSS Validation Service - no errors or warnings were found.
 
 <details><summary>Screenshot of CSS validation</summary>
-    <img src="docs/validation/">
+    <img src="docs/validation/css-validation.jpg">
 </details>
 
 ### Accessibility
-The accessibility of the website has been measured using the Wave WebAIM web accessibility evaluation tool.
+The accessibility of the website has been measured using the Wave WebAIM web accessibility evaluation tool - all pages pass without errors.
 
 <details><summary>Screenshot of index page accessibility evaluation</summary>
-    <img src="docs/validation/">
+    <img src="docs/validation/index-wave.jpg">
+</details>
+<details><summary>Screenshot of report page accessibility evaluation</summary>
+    <img src="docs/validation/report-wave.jpg">
 </details>
 <details><summary>Screenshot of 404 page accessibility evaluation</summary>
-    <img src="docs/validation/">
+    <img src="docs/validation/404-wave.jpg">
 </details>
 
 ### Performance
-The performance of the website has been measured with Google Lighthouse. 
+The performance of the website has been measured with Google Lighthouse with a perfect score on every page.
 
-<details><summary>Screenshot of index page accessibility evaluation</summary>
-    <img src="docs/validation/">
+<details><summary>Screenshot of index page Lighthouse performance</summary>
+    <img src="docs/validation/index-lighthouse.jpg">
 </details>
-<details><summary>Screenshot of 404 page accessibility evaluation</summary>
-    <img src="docs/validation/">
+<details><summary>Screenshot of report page Lighthouse performance</summary>
+    <img src="docs/validation/report-lighthouse.jpg">
+</details>
+<details><summary>Screenshot of 404 page Lighthouse performance</summary>
+    <img src="docs/validation/404-lighthouse.jpg">
 </details>
 
 ### Testing on Different Devices
