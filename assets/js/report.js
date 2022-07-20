@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', function () {
  */
 function formSubmitted() {
     let formSubmitMessage =
-    `<h1>Thank you for your report!</h1>
+    `<h2>Thank you for your report!</h2>
     <p>Thank you for taking the time to submit a bug report. We will provide you with an update once the
     bug has been fixed!</p>
     <a href="index.html" class="btn return-btn">Back to game</a>`; 
