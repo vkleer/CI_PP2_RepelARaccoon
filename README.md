@@ -75,8 +75,9 @@
 
 #### Site owner
 8. As the website owner, I want users to be able to report a bug
-9. As the website owner, I want users to be able to contact me personally on social media
-10. As the website owner, I want to provide an interactive and responsive game that works on all devices
+9. As the website owner, I want user to receive feedback after submitting a bug report
+10. As the website owner, I want users to be able to contact me personally on social media
+11. As the website owner, I want to provide an interactive and responsive game that works on all devices
 
 ## Design
 
@@ -174,7 +175,6 @@ The website has a total of three pages and 10 features.
 - Custom logo is used and placed on the left of the title
 - The header is responsive and works on all screen sizes
 - Is present on every page
-- Covers user story **number**
 
 <details><summary>Screenshot of Header</summary>
     <img src="docs/features/header-feature.jpg">
@@ -186,7 +186,7 @@ The website has a total of three pages and 10 features.
 - Contains social media links to my GitHub account and to the LinkedIn website (my account is currently in hibernation), with corresponding icons
 - Contains a link to the report page, also using a matching icon
 - Is present on every page
-- Covers user story **number**
+- Covers user story **9** and **10**
 
 <details><summary>Screenshot of Footer</summary>
     <img src="docs/features/footer-feature.jpg">
@@ -195,7 +195,7 @@ The website has a total of three pages and 10 features.
 ### Home screen
 - Contains two buttons, one linking to the difficulty screen and the other to the instructions screen
 - When either of the buttons is clicked, the home screen is hidden and the other screen is displayed instead
-- Covers user story **number**
+- Covers user story **2**
 
 <details><summary>Screenshot of Home screen</summary>
     <img src="docs/features/home-screen-feature.jpg">
@@ -205,7 +205,7 @@ The website has a total of three pages and 10 features.
 - Contains three buttons to pick a difficulty level and one button to go back to the home screen
 - When a difficulty is selected, the user is taken to the game screen, starting the game
 - When the user clicks/taps on the back button, the user is taken back to the home screen
-- Covers user story **number**
+- Covers user story **1**
 
 <details><summary>Screenshot of Difficulty screen</summary>
     <img src="docs/features/difficulty-screen-feature.jpg">
@@ -215,7 +215,7 @@ The website has a total of three pages and 10 features.
 - Contains two buttons, one that links to the difficulty screen and one that takes the user back to the home screen
 - Informs the user on how to play the game
 - Entertains the user with a little backstory on the game
-- Covers user story **number**
+- Covers user story **2**
 
 <details><summary>Screenshot of Instructions screen</summary>
     <img src="docs/features/instructions-screen-feature.jpg">
@@ -229,7 +229,7 @@ The website has a total of three pages and 10 features.
     - Cheese sprites to visualize the cheese you have left
     - Bush sprites, which are the only places that a raccoon can spawn
     - A raccoon sprite, which is randomly placed on one of the available bushes
-- Covers user story **number**
+- Covers user story **3**, **4** and **5**
 
 <details><summary>Screenshot of Game screen</summary>
     <img src="docs/features/game-screen-feature.jpg">
@@ -240,7 +240,7 @@ The website has a total of three pages and 10 features.
 - Contains a heading that either tells you that you've won or lost, along with a paragraph to elaborate
 - The heading and paragraph are set dynamically, grabbing the score and cheese left values from the game to provide feedback to the user
 - Contains two buttons, one that links to the difficulty screen and one to the instructions screen
-- Covers user story **number**
+- Covers user story **6** and **7**
 
 <details><summary>Screenshot of Game Over screen</summary>
     <img src="docs/features/game-over-screen-feature.jpg">
@@ -250,7 +250,7 @@ The website has a total of three pages and 10 features.
 - Allows users to report bugs to the developer
 - Uses EmailJS to send the form content to the developer
 - Contains two buttons, one to submit the form and one to the index page
-- Covers user story **number**
+- Covers user story **8**
 
 <details><summary>Screenshot of Report a Bug form</summary>
     <img src="docs/features/report-screen-feature.jpg">
@@ -259,7 +259,7 @@ The website has a total of three pages and 10 features.
 ### Form submission screen
 - After the report form has been submitted, this screen shows up to provide the user with feedback about their submission
 - Contains one button that links back to the index page
-- Covers user story **number**
+- Covers user story **9**
 
 <details><summary>Screenshot of Form submission screen</summary>
     <img src="docs/features/report-submission-screen-feature.jpg">
