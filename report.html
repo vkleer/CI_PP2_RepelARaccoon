@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="icon" href="assets/images/favicon.ico">
     <!-- EmailJS script needs to be loaded here to work properly -->
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 </head>
 <body>
     <!-- Header with game name and logo -->
@@ -21,34 +21,36 @@
         </h1>
         <h2 id="section-title">A game inspired by Whack-A-Mole</h2>
     </header>
-    <section id="contact-section" class="section">
-        <h1>Report a Bug</h1>
-            <p>
-                Found a bug while playing the game? Please fill out this form in as much detail as you can so 
-                I can work on it. <br><br>
-                If you would like to contact me personally, please refer to my GitHub and LinkedIn handles in the 
-                bottom left corner of the page.
-            </p>
-            <!-- Form for Contact section -->
-            <form id="report-form">
-                <div class="form-div">
-                    <label for="name">Name:</label>
-                    <input type="text" name="name" id="name" class="text-input" required>
-                </div>
-                <div class="form-div">
-                    <label for="email">Email:</label>
-                    <input type="email" name="email" id="email" class="text-input" required>
-                </div>
-                <div class="form-div">
-                    <label for="message">Message:</label>
-                    <textarea name="message" id="message" rows="10" class="text-input"></textarea>
-                </div>
-                <div id="form-buttons">
-                    <input id="form-submit" class="btn" type="submit" value="Submit">
-                    <a id="form-back" href="index.html" class="btn return-btn">Back to game</a>
-                </div>
-            </form>
-    </section>
+    <main>
+        <section id="contact-section" class="section">
+            <h1>Report a Bug</h1>
+                <p>
+                    Found a bug while playing the game? Please fill out this form in as much detail as you can so 
+                    I can work on it. <br><br>
+                    If you would like to contact me personally, please refer to my GitHub and LinkedIn handles in the 
+                    bottom left corner of the page.
+                </p>
+                <!-- Form for Contact section -->
+                <form id="report-form">
+                    <div class="form-div">
+                        <label for="name">Name:</label>
+                        <input type="text" name="name" id="name" class="text-input" required>
+                    </div>
+                    <div class="form-div">
+                        <label for="email">Email:</label>
+                        <input type="email" name="email" id="email" class="text-input" required>
+                    </div>
+                    <div class="form-div">
+                        <label for="message">Message:</label>
+                        <textarea name="message" id="message" rows="10" class="text-input"></textarea>
+                    </div>
+                    <div id="form-buttons">
+                        <input id="form-submit" class="btn" type="submit" value="Submit">
+                        <a id="form-back" href="index.html" class="btn return-btn">Back to game</a>
+                    </div>
+                </form>
+        </section>
+    </main>
     <!-- Footer with social media links -->
     <footer>
         <!-- Social media links -->
