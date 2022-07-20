@@ -202,6 +202,18 @@ The CSS of the website has been validatus using W3C's CSS Validation Service - n
     <img src="docs/validation/css-validation.jpg">
 </details>
 
+### JavaScript Validation
+The JavaScript of the website has been validated using JSHint. 
+
+<details><summary>Screenshot of game.js JSHint validation</summary>
+    The only warnings are related to two anonymous function calls, which I had to use to set the parameters for my showSection function.
+    <img src="docs/validation/game-jshint.jpg">
+</details>
+<details><summary>Screenshot of report.js JSHint validation</summary>
+    The warning about the emailjs variable is there since JSHint can't see the external EmailJS script that handles this script - the variable is not actually undefined.
+    <img src="docs/validation/report-jshint.jpg">
+</details>
+
 ### Accessibility
 The accessibility of the website has been measured using the Wave WebAIM web accessibility evaluation tool - all pages pass without errors.
 
