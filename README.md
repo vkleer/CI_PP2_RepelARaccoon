@@ -111,12 +111,12 @@ The footer is sticky since it contains the most information, allowing users to g
 Headings are used hierarchically on every page and section. Each section uses the same styling rules through classes for consistency and some sections have their content set dynamically through JavaScript.
 
 The website consists of three pages:
-- The index page with 5 different sections:
-    - A home section with two buttons, linking to the difficulty section and instructions section
-    - A difficulty section that allows users to pick a difficulty level for the game, starting the game when a difficulty level is chosen
-    - An instructions section informing users how to play the game along with a little backstory
-    - A game section that hold the actual game
-    - A game over section for when the user has finished playing
+- The index page with five different screens:
+    - A home screen with two buttons, linking to the difficulty section and instructions section
+    - A difficulty screen that allows users to pick a difficulty level for the game, starting the game when a difficulty level is chosen
+    - An instructions screen informing users how to play the game along with a little backstory
+    - A game screen that hold the actual game
+    - A game over screen for when the user has finished playing
 - The report page with a form to report a bug
 - The 404 page to re-direct users back to the index page if a 404 error occurs
 
@@ -160,24 +160,117 @@ The website consists of three pages:
 - Adobe Illustrator
 - Font Awesome
 - [Favicon.io](https://favicon.io/)
+- EmailJS
+- W3C's Markup Validation Service
+- W3C's CSS Validation Service
+- Wave WebAIM's web accessibility evaluation tool
+- JSHint
+- Google Chrome's DevTools
 
 ## Features
-The website has a total of x sections and x features.
+The website has a total of three pages and 10 features.
 
-### Feature name
-- description of feature
+### Header
+- Custom logo is used and placed on the left of the title
+- The header is responsive and works on all screen sizes
+- Is present on every page
 - Covers user story **number**
 
-<details><summary>Screenshot of Feature</summary>
-    <img src="docs/features/">
+<details><summary>Screenshot of Header</summary>
+    <img src="docs/features/header-feature.jpg">
+</details>
+
+### Footer
+- The footer is sticky, meaning it will always be at the bottom of the page, even if a small screen is used
+- Uses the same color as the header for consistency
+- Contains social media links to my GitHub account and to the LinkedIn website (my account is currently in hibernation), with corresponding icons
+- Contains a link to the report page, also using a matching icon
+- Is present on every page
+- Covers user story **number**
+
+<details><summary>Screenshot of Footer</summary>
+    <img src="docs/features/footer-feature.jpg">
+</details>
+
+### Home screen
+- Contains two buttons, one linking to the difficulty screen and the other to the instructions screen
+- When either of the buttons is clicked, the home screen is hidden and the other screen is displayed instead
+- Covers user story **number**
+
+<details><summary>Screenshot of Home screen</summary>
+    <img src="docs/features/home-screen-feature.jpg">
+</details>
+
+### Difficulty screen
+- Contains three buttons to pick a difficulty level and one button to go back to the home screen
+- When a difficulty is selected, the user is taken to the game screen, starting the game
+- When the user clicks/taps on the back button, the user is taken back to the home screen
+- Covers user story **number**
+
+<details><summary>Screenshot of Difficulty screen</summary>
+    <img src="docs/features/difficulty-screen-feature.jpg">
+</details>
+
+### Instructions screen
+- Contains two buttons, one that links to the difficulty screen and one that takes the user back to the home screen
+- Informs the user on how to play the game
+- Entertains the user with a little backstory on the game
+- Covers user story **number**
+
+<details><summary>Screenshot of Instructions screen</summary>
+    <img src="docs/features/instructions-screen-feature.jpg">
+</details>
+
+### Game screen
+- Consists of multiple elements that form the game:
+    - A timer that shows how much time is left in the game
+    - A score counter to keep the score
+    - A cheese counter to keep count of the amount of cheese (lives) you have left
+    - Cheese sprites to visualize the cheese you have left
+    - Bush sprites, which are the only places that a raccoon can spawn
+    - A raccoon sprite, which is randomly placed on one of the available bushes
+- Covers user story **number**
+
+<details><summary>Screenshot of Game screen</summary>
+    <img src="docs/features/game-screen-feature.jpg">
+</details>
+
+### Game Over screen
+- Once the game is finished, either by winning or losing the game, the user is taken to the game over screen
+- Contains a heading that either tells you that you've won or lost, along with a paragraph to elaborate
+- The heading and paragraph are set dynamically, grabbing the score and cheese left values from the game to provide feedback to the user
+- Contains two buttons, one that links to the difficulty screen and one to the instructions screen
+- Covers user story **number**
+
+<details><summary>Screenshot of Game Over screen</summary>
+    <img src="docs/features/game-over-screen-feature.jpg">
+</details>
+
+### Report a Bug form
+- Allows users to report bugs to the developer
+- Uses EmailJS to send the form content to the developer
+- Contains two buttons, one to submit the form and one to the index page
+- Covers user story **number**
+
+<details><summary>Screenshot of Report a Bug form</summary>
+    <img src="docs/features/report-screen-feature.jpg">
+</details>
+
+### Form submission screen
+- After the report form has been submitted, this screen shows up to provide the user with feedback about their submission
+- Contains one button that links back to the index page
+- Covers user story **number**
+
+<details><summary>Screenshot of Form submission screen</summary>
+    <img src="docs/features/report-submission-screen-feature.jpg">
 </details>
 
 ### 404 Error Page
-- Displays a custom 404 error page, keeping the user in the flow of the website
-- Provides a means for the user to easily return to the main website
+- A custom 404 error page that is styled like the rest of the website, keeping the user in the flow of the website
+- Contains one button that links back to the index page
 
 <details><summary>Screenshot of 404 Error Page</summary>
-    <img src="docs/features/">
+    <img src="docs/features/404-screen-feature.jpg">
 </details>
 
 ## Testing
