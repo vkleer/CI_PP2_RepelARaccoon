@@ -20,10 +20,6 @@ h1, h2, h3 {
     font-weight: 700;
 }
 
-.box {
-    display: flex;
-    height: 100%;
-}
 /* Header */
 header {
     height: 130px;
@@ -62,6 +58,7 @@ header h2 {
     box-sizing: border-box;
 }
 .section p, .section ol {
+    font-size: 1.1rem;
     text-align: left;
     margin: 0 35px 20px;
 }
@@ -286,18 +283,24 @@ footer i:hover, footer a:hover, footer a:hover i {
     header h2 {
         font-size: 1rem;
     }
+    
+    /* Classes for all sections */
+    .section {
+        margin: 20px auto;
+    }
+    .section p, .section li {
+        font-size: 1rem;
+    }
+
+    /* Game assets */
     .bush {
         
         margin: 10px;
     }
-    .section {
-        margin: 20px auto;
-    }
 
-    /* Game assets */
     .raccoon {
-        height: 46px;
-        width: 52px;
+        height: 50px;
+        width: 59px;
         margin: -20px auto;
     }
 
@@ -313,6 +316,7 @@ footer i:hover, footer a:hover, footer a:hover i {
 
 /* Breakpoint for bushes */
 @media screen and (max-width: 340px) {
+    /* Game assets */
     .bush {
         height: 30px;
         width: 74px;
