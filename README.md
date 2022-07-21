@@ -506,10 +506,15 @@ If you want to clone this repository, follow these steps:
 Images that are not referenced below are created or owned by the developer.
 
 ### Images
-- 
+- The [background image](assets/images/background.jpg) is the thumbnail from this [YouTube video](https://www.youtube.com/watch?v=9TlmBmMonIc) by user [HeartBeast](https://www.youtube.com/c/uheartbeast)
 
-### Code
-- 
+### CSS Code
+- The footer was made sticky to reliably adapt to the height of the page. I implemented a solution on [Stackoverflow](https://stackoverflow.com/questions/46778057/set-footer-to-bottom-of-page-without-using-fixed-position) by user [UncaughtTypeError](https://stackoverflow.com/users/5283476/uncaughttypeerror)
+
+### JavaScript Code
+- Nothing was copy and pasted, but some of the logic from the 'randomHole()' function was used, customized and built upon from this [Medium article](https://medium.com/@divyamcm/whack-a-mole-game-using-html-css-and-javascript-84b108ec5c8e) by [Divya M C M](https://medium.com/@divyamcm)
+- Being able to stop and start the game again without reloading the page was crucial, which is where the Js Reference on [clearInterval()](https://www.w3schools.com/jsref/met_win_clearinterval.asp) from [W3Schools](https://www.w3schools.com/jsref/met_win_clearinterval.asp) came in clutch
+- Implementing the EmailJS API into my form and the code written in the [report.js](assets/js/report.js) script was done with the help of [EmailJS' tutorial page](https://www.emailjs.com/docs/tutorial/overview/)
 
 ## Acknowledgements
 I would like to thank:
