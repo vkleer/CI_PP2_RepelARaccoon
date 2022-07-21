@@ -506,7 +506,7 @@ If you want to clone this repository, follow these steps:
 Images that are not referenced below are created or owned by the developer.
 
 ### Images
-- The [background image](assets/images/background.jpg) is the thumbnail from this [YouTube video](https://www.youtube.com/watch?v=9TlmBmMonIc) by user [HeartBeast](https://www.youtube.com/c/uheartbeast)
+- The [background image](assets/images/background.jpg) used on the website is the thumbnail from this [YouTube video](https://www.youtube.com/watch?v=9TlmBmMonIc) by user [HeartBeast](https://www.youtube.com/c/uheartbeast)
 
 ### CSS Code
 - The footer was made sticky to reliably adapt to the height of the page. I implemented a solution on [Stackoverflow](https://stackoverflow.com/questions/46778057/set-footer-to-bottom-of-page-without-using-fixed-position) by user [UncaughtTypeError](https://stackoverflow.com/users/5283476/uncaughttypeerror)
@@ -519,3 +519,4 @@ Images that are not referenced below are created or owned by the developer.
 ## Acknowledgements
 I would like to thank:
 - My mentor Mo Shami for providing me with advice and guidance for this project
+- My partner Lauren Baker for helping me with testing and finding multiple bugs
