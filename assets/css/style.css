@@ -183,7 +183,7 @@ footer i:hover, footer a:hover, footer a:hover i {
     margin-right: 20px;
 }
 
-/* Report section */
+/* Report form section */
 #report-form {
     margin: 0 35px;
 }
@@ -225,7 +225,7 @@ footer i:hover, footer a:hover, footer a:hover i {
     line-height: 50px;
 }
 
-/* Break point for form on small screens */
+/* Break point for report form on small screens */
 @media screen and (max-width: 500px) {
     #form-buttons input, #form-buttons button, #form-buttons a {
         width: 100%;
@@ -264,7 +264,7 @@ footer i:hover, footer a:hover, footer a:hover i {
         margin: 0 5px;
     }
 
-    /* Game-over section */
+    /* Game section */
     #scores p {
         margin: 10px 0;
     }
@@ -277,7 +277,6 @@ footer i:hover, footer a:hover, footer a:hover i {
         width: 74px;
     }
 
-    /* Sized to fit bushes proportionally */
     .raccoon {
         height: 42px;
         width: 49px;
