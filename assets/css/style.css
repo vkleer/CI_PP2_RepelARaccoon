@@ -50,7 +50,7 @@ header h2 {
 /* Classes for all sections */
 .section {
     height: auto;
-    max-width: 500px;
+    max-width: 800px;
     width: 100%;
     background-color: rgb(235, 235, 235, 0.95);
     text-align: center;
@@ -93,21 +93,21 @@ header h2 {
     padding-top: 0;
 }
 #game-body {
-    max-width: 500px;
+    max-width: 600px;
     width: 100%;
     margin: 0 auto;
+}
+
+#game-over-text {
+    text-align: center;
 }
 
 #cheeses {
     margin: 20px auto;
 }
 
-/* How-to-play section */
-#how-to-play-section .start-button {
-    margin-top: 30px;
-}
-
 #scores p {
+    font-size: 1.2rem;
     display: inline-block;
     margin: 20px 5px 10px;
     padding: 4px;
@@ -119,10 +119,19 @@ header h2 {
     font-weight: bold;
 }
 
+/* How-to-play section */
+#how-to-play-section .start-button {
+    margin-top: 30px;
+}
+
+#how-to-play-section li {
+    margin: 0 20px;
+}
+
 /* Game assets */
 .bush {
-    height: 37px;
-    width: 92px;
+    height: 60px;
+    width: 149px;
     background-image: url('../images/bush.png');
     background-size: contain;
     background-repeat: no-repeat;
@@ -132,18 +141,18 @@ header h2 {
 }
 
 .cheese {
-    height: 28px;
-    width: 46px;
+    height: 39px;
+    width: 65px;
     background-image: url('../images/cheese.png');
     background-size: contain;
     background-repeat: no-repeat;
     display: inline-block;
-    margin: 0 20px;
+    margin: 0 20px 20px 20px;
 }
 
 .raccoon {
-    height: 61px;
-    width: 69px;
+    height: 81px;
+    width: 90px;
     background-image: url('../images/raccoon.png');
     background-size: contain;
     background-repeat: no-repeat;
@@ -230,6 +239,38 @@ footer i:hover, footer a:hover, footer a:hover i {
     #form-buttons input, #form-buttons button, #form-buttons a {
         width: 100%;
         margin: 20px auto;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    /* Classes for all sections */
+    .section {
+        max-width: 500px;
+    }
+
+    /* Game section */
+    #game-body {
+        max-width: 500px;
+    }
+
+    #scores p {
+        font-size: 1rem;
+    }
+
+    /* Game assets */
+    .bush {
+        height: 37px;
+        width: 92px;
+    }
+
+    .raccoon {
+        height: 61px;
+        width: 69px;
+    }
+
+    .cheese {
+        height: 28px;
+        width: 46px;
     }
 }
 
