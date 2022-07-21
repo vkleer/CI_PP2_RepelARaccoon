@@ -172,10 +172,9 @@ The website consists of three pages:
 - Git
 - Balsamiq
 - Google Fonts
-- Adobe Photoshop
 - Adobe Illustrator
 - Font Awesome
-- [Favicon.io](https://favicon.io/)
+- Favicon.io
 - EmailJS
 - W3C's Markup Validation Service
 - W3C's CSS Validation Service
