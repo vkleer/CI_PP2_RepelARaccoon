@@ -231,14 +231,7 @@ footer i:hover, footer a:hover, footer a:hover i {
     line-height: 50px;
 }
 
-/* Break point for report form on small screens */
-@media screen and (max-width: 500px) {
-    #form-buttons input, #form-buttons button, #form-buttons a {
-        width: 100%;
-        margin: 20px auto;
-    }
-}
-
+/* Media query for medium screens */
 @media screen and (max-width: 900px) {
     /* Classes for all sections */
     .section {
@@ -268,6 +261,15 @@ footer i:hover, footer a:hover, footer a:hover i {
     .cheese {
         height: 28px;
         width: 46px;
+        margin: 0 8px 8px 20px;
+    }
+}
+
+/* Break point for report form on small screens */
+@media screen and (max-width: 500px) {
+    #form-buttons input, #form-buttons button, #form-buttons a {
+        width: 100%;
+        margin: 20px auto;
     }
 }
 
