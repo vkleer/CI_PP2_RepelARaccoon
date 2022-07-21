@@ -24,6 +24,16 @@
     1. [Languages](#languages)
     2. [Tools](#tools)
 5. [Features](#features)
+    1. [Header](#header)
+    2. [Footer](#footer)
+    3. [Home screen](#home-screen)
+    4. [Difficulty screen](#difficulty-screen)
+    5. [Instructions screen](#instructions-screen)
+    6. [Game screen](#game-screen)
+    7. [Game Over screen](#game-over-screen)
+    8. [Report a Bug form](#report-a-bug-form)
+    9. [Form Submission screen](#form-submission-screen)
+    10. [404 Error page](#404-error-page)
 6. [Testing](#validation)
     1. [HTML Validation](#html-validation)
     2. [CSS Validation](#css-validation)
@@ -34,7 +44,12 @@
     7. [Testing User Stories](#testing-user-stories)
 8. [Bugs](#Bugs)
 9. [Deployment](#deployment)
+    1. [GitHub](#github)
+    2. [EmailJS API](#emailjs-api)
 10. [Credits](#credits)
+    1. [Images](#images)
+    2. [CSS Code](#css-code)
+    3. [JavaScript Code](#javascript-code)
 11. [Acknowledgements](#acknowledgements)
 
 ## Project Goals
@@ -256,7 +271,7 @@ The website has a total of three pages and 10 features.
     <img src="docs/features/report-screen-feature.jpg">
 </details>
 
-### Form submission screen
+### Form Submission screen
 - After the report form has been submitted, this screen shows up to provide the user with feedback about their submission
 - Contains one button that links back to the index page
 - Covers user story **9**
@@ -265,7 +280,7 @@ The website has a total of three pages and 10 features.
     <img src="docs/features/report-submission-screen-feature.jpg">
 </details>
 
-### 404 Error Page
+### 404 Error page
 - A custom 404 error page that is styled like the rest of the website, keeping the user in the flow of the website
 - Contains one button that links back to the index page
 
@@ -478,6 +493,8 @@ The website has been tested without any issues on the four browsers with the lar
 
 ## Deployment
 
+### GitHub
+
 This website was deployed using Github Pages with the following steps:
 
 1. Go to your Github Repository
@@ -501,6 +518,17 @@ If you want to clone this repository, follow these steps:
 5. In you IDE, open Git Bash
 6. Navigate to the working directory where you want to clone this directory
 7. Paste in the clone command you copied and press the 'enter' key to create the clone
+
+### EmailJS API
+
+The report form on my website uses the EmailJS API to send form submissions directly to the email address I specified on the platform. To start using EmailJS:
+
+1. Go to https://www.emailjs.com/ and create a free account
+2. Add a new email service and write down the 'Service ID'
+3. Create a new email template and write down the 'Template ID'
+4. Click on 'Account' on the left-side menu and write down your 'Public Key' under the 'API Keys' section
+5. Go to https://www.emailjs.com/docs/sdk/installation/ and follow the instructions to load the EmailJS SDK into your website
+6. Go to https://www.emailjs.com/docs/tutorial/creating-contact-form/ and follow the instructions to set up your form with EmailJS using your 'Service ID', 'Template ID' and 'Public Key' to connect it to your account
 
 ## Credits
 Images that are not referenced below are created or owned by the developer.
