@@ -467,8 +467,14 @@ The website has been tested without any issues on the four browsers with the lar
 
 | **Bug** | **Fix** |
 |-------------|------------|
-| bug description  | fix - [link to commit](link) |
-
+| Chrome crashes due to endless loop: All the bushes in the game start out with an 'empty' class to indicate a raccoon can be spawned there. If a bush does not contain the 'empty' class, the bush will be skipped and another one will be picked. The 'empty' class was not being re-added to the bushes after clicking on a raccoon, triggering an endless loop | Add the 'empty' class back to the bush after a raccoon has been clicked on - [link to commit](https://github.com/vkleer/CI_PP2_RepelARaccoon/commit/a4961ed8936f3e50889f43353dc7966e772567fa) |
+| The 'Start game' buttons were not getting an event listener added to them | Change for...in loop to for...of loop to properly iterate through the buttons - [link to commit](https://github.com/vkleer/CI_PP2_RepelARaccoon/commit/c39d56eea319dfa2c9640671b0d68273f3a02dfc) |
+| The div elements with an id of 'cheeses' and 'game-body' are being created when the game starts, but duplicate elements keep being created when a new game starts | Use if statements to check if the elements already exist before trying to create them - [link to commit](https://github.com/vkleer/CI_PP2_RepelARaccoon/commit/249942c6de3442644e5b1d34cf8f7c0dad496283) |
+| The report form is not submitting due to an undefined variable | The variable name in report.html didn't match the name used in the report.js script. Renamed the variable in the report.html file to match - [link to commit](https://github.com/vkleer/CI_PP2_RepelARaccoon/commit/5f7918a2a9c07c1706f519dedec8d75c134b7133) |
+| A section is being created within a section after submitting the report form, messing up the semantics and styling rules | Omitted the section tags from the formSubmitMessage variable - [link to commit](https://github.com/vkleer/CI_PP2_RepelARaccoon/commit/2aa4d93624a43690b8cf18bc64f8c40cc63bdebb) |
+| The h2 text in the header is overflowing from the header element on small screens | Change font-size from 1.4rem to 1rem in media query for screens with a width of 430px or smaller - [link to commit](https://github.com/vkleer/CI_PP2_RepelARaccoon/commit/8b4f60a531b4e324bc9690fa6a7dcb5768417812) |
+| Wrong button is shown after submitting the report form | Remove the 'return' id and add the 'return-btn' class instead - [link to commit](https://github.com/vkleer/CI_PP2_RepelARaccoon/commit/8b4f60a531b4e324bc9690fa6a7dcb5768417812) |
+| Footer on report.html page does not float the 'Report Bug' text, messing up the styling | Change the div id from 'contact' to 'report', since 'contact' has no styling rules - [link to commit](https://github.com/vkleer/CI_PP2_RepelARaccoon/commit/56728b464904d95b20f593b2f80247204515ef6d) |
 
 ## Deployment
 
